@@ -899,6 +899,7 @@ limitexceeded	dwm.c	/^struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1
 locale	grayblocks/config.ini	/^locale = $/;"	k	section:bar/main
 locale	grayblocks/preview.ini	/^locale = $/;"	k	section:bar/bottom
 localshare	dwm.c	/^static const char localshare[] = ".local\/share";$/;"	v	typeref:typename:const char[]	file:
+lockcmd	config.def.h	/^static const char *lockcmd[] = { "dm-tool", "lock", NULL};$/;"	v	typeref:typename:const char * []
 lockfullscreen	config.def.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
 lockfullscreen	config.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
 lrpad	dwm.c	/^static int lrpad;            \/* sum of left and right padding for text *\/$/;"	v	typeref:typename:int	file:
