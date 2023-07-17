@@ -37,12 +37,25 @@
 !_TAG_KIND_DESCRIPTION!Diff	h,hunk	/hunks/
 !_TAG_KIND_DESCRIPTION!Diff	m,modifiedFile	/modified files/
 !_TAG_KIND_DESCRIPTION!Diff	n,newFile	/newly created files/
+!_TAG_KIND_DESCRIPTION!Iniconf	k,key	/keys/
+!_TAG_KIND_DESCRIPTION!Iniconf	s,section	/sections/
 !_TAG_KIND_DESCRIPTION!Make	I,makefile	/makefiles/
 !_TAG_KIND_DESCRIPTION!Make	m,macro	/macros/
 !_TAG_KIND_DESCRIPTION!Make	t,target	/targets/
 !_TAG_KIND_DESCRIPTION!Man	S,subsection	/sub sections/
 !_TAG_KIND_DESCRIPTION!Man	s,section	/sections/
 !_TAG_KIND_DESCRIPTION!Man	t,title	/titles/
+!_TAG_KIND_DESCRIPTION!Markdown	S,subsection	/level 2 sections/
+!_TAG_KIND_DESCRIPTION!Markdown	T,l4subsection	/level 4 sections/
+!_TAG_KIND_DESCRIPTION!Markdown	c,chapter	/chapters/
+!_TAG_KIND_DESCRIPTION!Markdown	n,footnote	/footnotes/
+!_TAG_KIND_DESCRIPTION!Markdown	s,section	/sections/
+!_TAG_KIND_DESCRIPTION!Markdown	t,subsubsection	/level 3 sections/
+!_TAG_KIND_DESCRIPTION!Markdown	u,l5subsection	/level 5 sections/
+!_TAG_KIND_DESCRIPTION!Sh	a,alias	/aliases/
+!_TAG_KIND_DESCRIPTION!Sh	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!Sh	h,heredoc	/label for here document/
+!_TAG_KIND_DESCRIPTION!Sh	s,script	/script files/
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
@@ -50,10 +63,13 @@
 !_TAG_PARSER_VERSION!C	0.0	/current.age/
 !_TAG_PARSER_VERSION!C++	0.0	/current.age/
 !_TAG_PARSER_VERSION!Diff	0.0	/current.age/
+!_TAG_PARSER_VERSION!Iniconf	0.0	/current.age/
 !_TAG_PARSER_VERSION!Make	0.0	/current.age/
 !_TAG_PARSER_VERSION!Man	0.0	/current.age/
+!_TAG_PARSER_VERSION!Markdown	0.0	/current.age/
+!_TAG_PARSER_VERSION!Sh	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/abu/dwm/	//
+!_TAG_PROC_CWD	/home/abu/abudwm/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
@@ -66,6 +82,8 @@
 !_TAG_ROLE_DESCRIPTION!C++!macro	undef	/undefined/
 !_TAG_ROLE_DESCRIPTION!Make!makefile	included	/included/
 !_TAG_ROLE_DESCRIPTION!Make!makefile	optional	/optionally included/
+!_TAG_ROLE_DESCRIPTION!Sh!heredoc	endmarker	/end marker/
+!_TAG_ROLE_DESCRIPTION!Sh!script	loaded	/loaded/
 ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -0,0 +1,809	dwm-vanitygaps-6.2.diff	/^@@ -0,0 +1,809 @@$/;"	h	newFile:b/vanitygaps.c
 -0,0 +1,822	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -0,0 +1,822 @@$/;"	h	newFile:b/vanitygaps.c
@@ -137,6 +155,86 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -71,7 +91,26	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -71,7 +91,26 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -87,6 +87,7	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -87,6 +87,7 @@ typedef struct Client Client;$/;"	h	modifiedFile:a/dwm.c
 .c.o	Makefile	/^.c.o:$/;"	t
+0	grayblocks/bars.ini	/^bar-capacity-foreground-0 = ${color.foreground}$/;"	k	section:module/battery_bar
+0	grayblocks/bars.ini	/^bar-foreground-0 = ${color.foreground}$/;"	k	section:module/brightness
+0	grayblocks/bars.ini	/^bar-load-foreground-0 = ${color.foreground}$/;"	k	section:module/cpu_bar
+0	grayblocks/bars.ini	/^bar-progress-foreground-0 = ${color.foreground}$/;"	k	section:module/mpd_bar
+0	grayblocks/bars.ini	/^bar-used-foreground-0 = ${color.foreground}$/;"	k	section:module/filesystem_bar
+0	grayblocks/bars.ini	/^bar-used-foreground-0 = ${color.foreground}$/;"	k	section:module/memory_bar
+0	grayblocks/bars.ini	/^bar-volume-foreground-0 = ${color.foreground}$/;"	k	section:module/volume
+0	grayblocks/bars.ini	/^mount-0 = \/$/;"	k	section:module/filesystem_bar
+0	grayblocks/bars.ini	/^ramp-0 = $/;"	k	section:module/brightness
+0	grayblocks/bars.ini	/^ramp-headphones-0 = $/;"	k	section:module/volume
+0	grayblocks/bars.ini	/^ramp-volume-0 = $/;"	k	section:module/volume
+0	grayblocks/config.ini	/^font-0 = "Iosevka Nerd Font:size=10;4"$/;"	k	section:bar/main
+0	grayblocks/modules.ini	/^animation-charging-0 = $/;"	k	section:module/battery
+0	grayblocks/modules.ini	/^blacklist-0 = num lock$/;"	k	section:module/keyboard
+0	grayblocks/modules.ini	/^icon-0 = 1;$/;"	k	section:module/workspaces
+0	grayblocks/modules.ini	/^mount-0 = \/$/;"	k	section:module/filesystem
+0	grayblocks/modules.ini	/^ramp-0 = $/;"	k	section:module/backlight
+0	grayblocks/modules.ini	/^ramp-0 = $/;"	k	section:module/temperature
+0	grayblocks/modules.ini	/^ramp-capacity-0 = $/;"	k	section:module/battery
+0	grayblocks/modules.ini	/^ramp-headphones-0 = $/;"	k	section:module/alsa
+0	grayblocks/modules.ini	/^ramp-signal-0 = $/;"	k	section:module/network
+0	grayblocks/modules.ini	/^ramp-volume-0 = $/;"	k	section:module/alsa
+0	grayblocks/modules.ini	/^ramp-volume-0 = $/;"	k	section:module/pulseaudio
+0	grayblocks/preview.ini	/^font-0 = "Iosevka Nerd Font:size=10;4"$/;"	k	section:bar/main
+0	grayblocks/user_modules.ini	/^menu-0-0 = reboot$/;"	k	section:module/powermenu
+0	grayblocks/user_modules.ini	/^menu-0-0 = Menu$/;"	k	section:module/menu
+0	grayblocks/user_modules.ini	/^menu-1-0 = back$/;"	k	section:module/powermenu
+0	grayblocks/user_modules.ini	/^menu-2-0 = shutdown$/;"	k	section:module/powermenu
+1	grayblocks/bars.ini	/^bar-capacity-foreground-1 = ${color.foreground}$/;"	k	section:module/battery_bar
+1	grayblocks/bars.ini	/^bar-foreground-1 = ${color.foreground}$/;"	k	section:module/brightness
+1	grayblocks/bars.ini	/^bar-load-foreground-1 = ${color.foreground}$/;"	k	section:module/cpu_bar
+1	grayblocks/bars.ini	/^bar-progress-foreground-1 = ${color.foreground}$/;"	k	section:module/mpd_bar
+1	grayblocks/bars.ini	/^bar-used-foreground-1 = ${color.foreground}$/;"	k	section:module/filesystem_bar
+1	grayblocks/bars.ini	/^bar-used-foreground-1 = ${color.foreground}$/;"	k	section:module/memory_bar
+1	grayblocks/bars.ini	/^bar-volume-foreground-1 = ${color.foreground}$/;"	k	section:module/volume
+1	grayblocks/bars.ini	/^ramp-1 = $/;"	k	section:module/brightness
+1	grayblocks/bars.ini	/^ramp-volume-1 = $/;"	k	section:module/volume
+1	grayblocks/config.ini	/^font-1 = "feather:size=10;3"$/;"	k	section:bar/main
+1	grayblocks/modules.ini	/^animation-charging-1 = $/;"	k	section:module/battery
+1	grayblocks/modules.ini	/^blacklist-1 = scroll lock$/;"	k	section:module/keyboard
+1	grayblocks/modules.ini	/^icon-1 = 2;$/;"	k	section:module/workspaces
+1	grayblocks/modules.ini	/^ramp-1 = $/;"	k	section:module/backlight
+1	grayblocks/modules.ini	/^ramp-1 = $/;"	k	section:module/temperature
+1	grayblocks/modules.ini	/^ramp-capacity-1 = $/;"	k	section:module/battery
+1	grayblocks/modules.ini	/^ramp-signal-1 = $/;"	k	section:module/network
+1	grayblocks/modules.ini	/^ramp-volume-1 = $/;"	k	section:module/alsa
+1	grayblocks/modules.ini	/^ramp-volume-1 = $/;"	k	section:module/pulseaudio
+1	grayblocks/preview.ini	/^font-1 = "feather:size=10;3"$/;"	k	section:bar/main
+1	grayblocks/user_modules.ini	/^menu-0-1 = shutdown$/;"	k	section:module/powermenu
+1	grayblocks/user_modules.ini	/^menu-0-1 = Files$/;"	k	section:module/menu
+1	grayblocks/user_modules.ini	/^menu-1-1 = reboot$/;"	k	section:module/powermenu
+1	grayblocks/user_modules.ini	/^menu-2-1 = back$/;"	k	section:module/powermenu
+2	grayblocks/bars.ini	/^bar-capacity-foreground-2 = ${color.foreground}$/;"	k	section:module/battery_bar
+2	grayblocks/bars.ini	/^bar-foreground-2 = ${color.foreground}$/;"	k	section:module/brightness
+2	grayblocks/bars.ini	/^bar-load-foreground-2 = ${color.foreground}$/;"	k	section:module/cpu_bar
+2	grayblocks/bars.ini	/^bar-progress-foreground-2 = ${color.foreground}$/;"	k	section:module/mpd_bar
+2	grayblocks/bars.ini	/^bar-used-foreground-2 = ${color.foreground}$/;"	k	section:module/filesystem_bar
+2	grayblocks/bars.ini	/^bar-used-foreground-2 = ${color.foreground}$/;"	k	section:module/memory_bar
+2	grayblocks/bars.ini	/^bar-volume-foreground-2 = ${color.foreground}$/;"	k	section:module/volume
+2	grayblocks/bars.ini	/^ramp-2 = $/;"	k	section:module/brightness
+2	grayblocks/bars.ini	/^ramp-volume-2 = $/;"	k	section:module/volume
+2	grayblocks/modules.ini	/^icon-2 = 3;$/;"	k	section:module/workspaces
+2	grayblocks/modules.ini	/^ramp-2 = $/;"	k	section:module/backlight
+2	grayblocks/modules.ini	/^ramp-2 = $/;"	k	section:module/temperature
+2	grayblocks/modules.ini	/^ramp-capacity-2 = $/;"	k	section:module/battery
+2	grayblocks/modules.ini	/^ramp-signal-2 = $/;"	k	section:module/network
+2	grayblocks/modules.ini	/^ramp-volume-2 = $/;"	k	section:module/alsa
+2	grayblocks/modules.ini	/^ramp-volume-2 = $/;"	k	section:module/pulseaudio
+2	grayblocks/user_modules.ini	/^menu-0-2 = Terminal$/;"	k	section:module/menu
+3	grayblocks/bars.ini	/^ramp-3 = $/;"	k	section:module/brightness
+3	grayblocks/modules.ini	/^icon-3 = 4;$/;"	k	section:module/workspaces
+3	grayblocks/modules.ini	/^ramp-3 = $/;"	k	section:module/backlight
+3	grayblocks/modules.ini	/^ramp-3 = $/;"	k	section:module/temperature
+3	grayblocks/modules.ini	/^ramp-capacity-3 = $/;"	k	section:module/battery
+3	grayblocks/user_modules.ini	/^menu-0-3 = Browser$/;"	k	section:module/menu
+4	grayblocks/bars.ini	/^ramp-4 = $/;"	k	section:module/brightness
+4	grayblocks/modules.ini	/^icon-4 = 5;$/;"	k	section:module/workspaces
+4	grayblocks/modules.ini	/^ramp-4 = $/;"	k	section:module/backlight
+4	grayblocks/modules.ini	/^ramp-4 = $/;"	k	section:module/temperature
+4	grayblocks/modules.ini	/^ramp-capacity-4 = $/;"	k	section:module/battery
 Arg	dwm.c	/^} Arg;$/;"	t	typeref:union:__anon0f53a99e060a	file:
 BETWEEN	util.h	/^#define BETWEEN(/;"	d
 BUGS	dwm.1	/^.SH BUGS$/;"	s	title:DWM
@@ -168,6 +266,11 @@ CurResize	dwm.c	/^enum { CurNormal, CurResize, CurMove, CurLast }; \/* cursor *\
 DESCRIPTION	dwm.1	/^.SH DESCRIPTION$/;"	s	title:DWM
 DWM	dwm.1	/^.TH DWM 1 dwm\\-VERSION$/;"	t
 Drw	drw.h	/^} Drw;$/;"	t	typeref:struct:__anon0f5116480308
+EOF	grayblocks/scripts/colors-dark.sh	/^	cat > $RFILE <<- EOF$/;"	h
+EOF	grayblocks/scripts/colors-light.sh	/^	cat > $RFILE <<- EOF$/;"	h
+EOF	grayblocks/scripts/pywal.sh	/^	cat > $RF2FI <<- EOF$/;"	h
+EOF	grayblocks/scripts/pywal.sh	/^	cat > $RFILE <<- EOF$/;"	h
+EOF	grayblocks/scripts/random.sh	/^	cat > $RFILE <<- EOF$/;"	h
 FILES	dwm.1	/^.SH FILES$/;"	s	title:DWM
 FORCE_VSPLIT	config.def.h	/^#define FORCE_VSPLIT /;"	d
 FORCE_VSPLIT	config.h	/^#define FORCE_VSPLIT /;"	d
@@ -214,6 +317,7 @@ NumTags	dwm.c	/^struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1];
 OBJ	Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
 OPTIONS	dwm.1	/^.SH OPTIONS$/;"	s	title:DWM
 PREFIX	config.mk	/^PREFIX = \/usr\/local$/;"	m
+Remember the following:	README.md	/^## Remember the following:$/;"	s	chapter:abudwm
 Rule	dwm.c	/^} Rule;$/;"	t	typeref:struct:__anon0f53a99e0a08	file:
 SEE ALSO	dwm.1	/^.SH SEE ALSO$/;"	s	title:DWM
 SHCMD	config.def.h	/^#define SHCMD(/;"	d
@@ -242,6 +346,8 @@ X11INC	config.mk	/^X11INC = \/usr\/X11R6\/include$/;"	m
 X11LIB	config.mk	/^X11LIB = \/usr\/X11R6\/lib$/;"	m
 XINERAMAFLAGS	config.mk	/^XINERAMAFLAGS = -DXINERAMA$/;"	m
 XINERAMALIBS	config.mk	/^XINERAMALIBS  = -lXinerama$/;"	m
+_EOF_	grayblocks/scripts/colors-dark.sh	/^	cat <<- _EOF_$/;"	h
+_EOF_	grayblocks/scripts/colors-light.sh	/^	cat <<- _EOF_$/;"	h
 __anon0f5116430103	drw.c	/^	enum { nomatches_len = 64 };$/;"	g	function:drw_text	file:
 __anon0f5116430208	drw.c	/^	static struct { long codepoint[nomatches_len]; unsigned int idx; } nomatches;$/;"	s	function:drw_text	file:
 __anon0f5116480108	drw.h	/^typedef struct {$/;"	s
@@ -268,7 +374,14 @@ a/dwm.c	dwm-cfacts-vanitygaps-6.4_combo.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-cool-autostart-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-ewmhtags-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-vanitygaps-6.2.diff	/^--- a\/dwm.c$/;"	m
+abudwm	README.md	/^# abudwm$/;"	c
+active	grayblocks/modules.ini	/^label-active = %icon%$/;"	k	section:module/workspaces
+adapter	grayblocks/bars.ini	/^adapter = ACAD$/;"	k	section:module/battery_bar
+adapter	grayblocks/modules.ini	/^adapter = ADP1$/;"	k	section:module/battery
 all	Makefile	/^all: options dwm$/;"	t
+alt	grayblocks/colors.ini	/^background-alt = #becbcf$/;"	k	section:color
+alt	grayblocks/colors.ini	/^foreground-alt = #becbcf$/;"	k	section:color
+alt	grayblocks/modules.ini	/^time-alt = " %a, %d %b %Y"$/;"	k	section:module/date
 altbarclass	config.def.h	/^static const char *altbarclass      = "Polybar"; \/* Alternate bar class name *\/$/;"	v	typeref:typename:const char *
 altbarclass	config.h	/^static const char *altbarclass      = "Polybar"; \/* Alternate bar class name *\/$/;"	v	typeref:typename:const char *
 altbarcmd	config.def.h	/^static const char *altbarcmd        = "$HOME\/bar.sh"; \/* Alternate bar launch command *\/$/;"	v	typeref:typename:const char *
@@ -280,19 +393,87 @@ arg	dwm.c	/^	const Arg arg;$/;"	m	struct:__anon0f53a99e0808	typeref:typename:con
 arrange	dwm.c	/^	void (*arrange)(Monitor *);$/;"	m	struct:__anon0f53a99e0908	typeref:typename:void (*)(Monitor *)	file:
 arrange	dwm.c	/^arrange(Monitor *m)$/;"	f	typeref:typename:void
 arrangemon	dwm.c	/^arrangemon(Monitor *m)$/;"	f	typeref:typename:void
+ask	grayblocks/scripts/checkupdates	/^ask() {$/;"	f
+at	grayblocks/bars.ini	/^full-at = 99$/;"	k	section:module/battery_bar
+at	grayblocks/modules.ini	/^full-at = 99$/;"	k	section:module/battery
 attach	dwm.c	/^attach(Client *c)$/;"	f	typeref:typename:void
 attachstack	dwm.c	/^attachstack(Client *c)$/;"	f	typeref:typename:void
 autostartblocksh	dwm.c	/^static const char autostartblocksh[] = "autostart_blocking.sh";$/;"	v	typeref:typename:const char[]	file:
 autostartsh	dwm.c	/^static const char autostartsh[] = "autostart.sh";$/;"	v	typeref:typename:const char[]	file:
 b/vanitygaps.c	dwm-cfacts-vanitygaps-6.4_combo.diff	/^+++ b\/vanitygaps.c$/;"	n
 b/vanitygaps.c	dwm-vanitygaps-6.2.diff	/^+++ b\/vanitygaps.c$/;"	n
+background	grayblocks/bars.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/brightness
+background	grayblocks/bars.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/cpu_bar
+background	grayblocks/bars.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/memory_bar
+background	grayblocks/bars.ini	/^format-charging-background = ${color.background-alt}$/;"	k	section:module/battery_bar
+background	grayblocks/bars.ini	/^format-discharging-background = ${color.background-alt}$/;"	k	section:module/battery_bar
+background	grayblocks/bars.ini	/^format-full-background = ${color.background-alt}$/;"	k	section:module/battery_bar
+background	grayblocks/bars.ini	/^format-mounted-background = ${color.background-alt}$/;"	k	section:module/filesystem_bar
+background	grayblocks/bars.ini	/^format-muted-background = ${color.background-alt}$/;"	k	section:module/volume
+background	grayblocks/bars.ini	/^format-offline-background = ${color.background-alt}$/;"	k	section:module/mpd_bar
+background	grayblocks/bars.ini	/^format-online-background = ${color.background-alt}$/;"	k	section:module/mpd_bar
+background	grayblocks/bars.ini	/^format-unmounted-background = ${color.background-alt}$/;"	k	section:module/filesystem_bar
+background	grayblocks/bars.ini	/^format-volume-background = ${color.background-alt}$/;"	k	section:module/volume
+background	grayblocks/colors.ini	/^background = #0A1A31$/;"	k	section:color
+background	grayblocks/config.ini	/^background = ${color.background}$/;"	k	section:bar/main
+background	grayblocks/config.ini	/^compositing-background = source$/;"	k	section:settings
+background	grayblocks/config.ini	/^tray-background = ${color.background}$/;"	k	section:bar/main
+background	grayblocks/modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/backlight
+background	grayblocks/modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/cpu
+background	grayblocks/modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/date
+background	grayblocks/modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/keyboard
+background	grayblocks/modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/memory
+background	grayblocks/modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/temperature
+background	grayblocks/modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/workspaces
+background	grayblocks/modules.ini	/^format-charging-background = ${color.background-alt}$/;"	k	section:module/battery
+background	grayblocks/modules.ini	/^format-connected-background = ${color.background-alt}$/;"	k	section:module/network
+background	grayblocks/modules.ini	/^format-discharging-background = ${color.background-alt}$/;"	k	section:module/battery
+background	grayblocks/modules.ini	/^format-disconnected-background = ${color.background-alt}$/;"	k	section:module/network
+background	grayblocks/modules.ini	/^format-full-background = ${color.background-alt}$/;"	k	section:module/battery
+background	grayblocks/modules.ini	/^format-mounted-background = ${color.background-alt}$/;"	k	section:module/filesystem
+background	grayblocks/modules.ini	/^format-muted-background = ${color.background-alt}$/;"	k	section:module/alsa
+background	grayblocks/modules.ini	/^format-muted-background = ${color.background-alt}$/;"	k	section:module/pulseaudio
+background	grayblocks/modules.ini	/^format-unmounted-background = ${color.background-alt}$/;"	k	section:module/filesystem
+background	grayblocks/modules.ini	/^format-volume-background = ${color.background-alt}$/;"	k	section:module/alsa
+background	grayblocks/modules.ini	/^format-volume-background = ${color.background-alt}$/;"	k	section:module/pulseaudio
+background	grayblocks/modules.ini	/^format-warn-background = ${color.background-alt}$/;"	k	section:module/temperature
+background	grayblocks/preview.ini	/^background = ${color.background}$/;"	k	section:bar/main
+background	grayblocks/preview.ini	/^compositing-background = source$/;"	k	section:settings
+background	grayblocks/preview.ini	/^tray-background = ${color.background}$/;"	k	section:bar/bottom
+background	grayblocks/user_modules.ini	/^content-background = ${color.background-alt}$/;"	k	section:module/apps
+background	grayblocks/user_modules.ini	/^content-background = ${color.background-alt}$/;"	k	section:module/color-switch
+background	grayblocks/user_modules.ini	/^content-background = ${color.background}$/;"	k	section:module/launcher
+background	grayblocks/user_modules.ini	/^content-background = ${color.background}$/;"	k	section:module/sep
+background	grayblocks/user_modules.ini	/^content-background = ${color.background}$/;"	k	section:module/sysmenu
+background	grayblocks/user_modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/menu
+background	grayblocks/user_modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/powermenu
+background	grayblocks/user_modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/updates
+bar	grayblocks/bars.ini	/^[bar]$/;"	s
+bar/bottom	grayblocks/preview.ini	/^[bar\/bottom]$/;"	s
+bar/main	grayblocks/config.ini	/^[bar\/main]$/;"	s
+bar/main	grayblocks/preview.ini	/^[bar\/main]$/;"	s
+bar/mid	grayblocks/preview.ini	/^[bar\/mid]$/;"	s
+bar/top	grayblocks/preview.ini	/^[bar\/top]$/;"	s
 barwin	dwm.c	/^	Window barwin;$/;"	m	struct:Monitor	typeref:typename:Window	file:
 baseh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
 basew	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
+battery	grayblocks/bars.ini	/^battery = BAT1$/;"	k	section:module/battery_bar
+battery	grayblocks/modules.ini	/^battery = BAT0$/;"	k	section:module/battery
 bh	dwm.c	/^	int by, bh;           \/* bar geometry *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 bh	dwm.c	/^static int bh;               \/* bar height *\/$/;"	v	typeref:typename:int	file:
+border	grayblocks/config.ini	/^compositing-border = over$/;"	k	section:settings
+border	grayblocks/preview.ini	/^compositing-border = over$/;"	k	section:settings
 borderpx	config.def.h	/^static const unsigned int borderpx  = 1;        \/* border pixel of windows *\/$/;"	v	typeref:typename:const unsigned int
 borderpx	config.h	/^static const unsigned int borderpx  = 1;        \/* border pixel of windows *\/$/;"	v	typeref:typename:const unsigned int
+bottom	grayblocks/config.ini	/^bottom = true$/;"	k	section:bar/main
+bottom	grayblocks/config.ini	/^margin-bottom = 0$/;"	k	section:global/wm
+bottom	grayblocks/config.ini	/^radius-bottom = 0.0$/;"	k	section:bar/main
+bottom	grayblocks/preview.ini	/^bottom = true$/;"	k	section:bar/bottom
+bottom	grayblocks/preview.ini	/^bottom = true$/;"	k	section:bar/main
+bottom	grayblocks/preview.ini	/^bottom = true$/;"	k	section:bar/mid
+bottom	grayblocks/preview.ini	/^bottom = true$/;"	k	section:bar/top
+bottom	grayblocks/preview.ini	/^margin-bottom = 0$/;"	k	section:global/wm
+bottom	grayblocks/preview.ini	/^radius-bottom = 0.0$/;"	k	section:bar/main
 broken	dwm.c	/^static const char broken[] = "broken";$/;"	v	typeref:typename:const char[]	file:
 bstack	vanitygaps.c	/^bstack(Monitor *m)$/;"	f	typeref:typename:void	file:
 bstackhoriz	vanitygaps.c	/^bstackhoriz(Monitor *m)$/;"	f	typeref:typename:void	file:
@@ -302,17 +483,38 @@ buttons	config.def.h	/^static const Button buttons[] = {$/;"	v	typeref:typename:
 buttons	config.h	/^static const Button buttons[] = {$/;"	v	typeref:typename:const Button[]
 bw	dwm.c	/^	int bw, oldbw;$/;"	m	struct:Client	typeref:typename:int	file:
 by	dwm.c	/^	int by, bh;           \/* bar geometry *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+card	grayblocks/bars.ini	/^card = amdgpu_bl0$/;"	k	section:module/brightness
+card	grayblocks/modules.ini	/^card = intel_backlight$/;"	k	section:module/backlight
+center	grayblocks/config.ini	/^fixed-center = true$/;"	k	section:bar/main
+center	grayblocks/config.ini	/^modules-center = updates sep alsa battery sep backlight$/;"	k	section:bar/main
+center	grayblocks/preview.ini	/^fixed-center = true$/;"	k	section:bar/main
+center	grayblocks/preview.ini	/^modules-center =  mpd$/;"	k	section:bar/top
+center	grayblocks/preview.ini	/^modules-center =  title$/;"	k	section:bar/bottom
+center	grayblocks/preview.ini	/^modules-center = volume sep brightness sep battery_bar sep cpu_bar sep filesystem_bar sep memory/;"	k	section:bar/mid
 centeredfloatingmaster	vanitygaps.c	/^centeredfloatingmaster(Monitor *m)$/;"	f	typeref:typename:void
 centeredmaster	vanitygaps.c	/^centeredmaster(Monitor *m)$/;"	f	typeref:typename:void
 cfact	dwm.c	/^	float cfact;$/;"	m	struct:Client	typeref:typename:float	file:
+change_color	grayblocks/scripts/colors-dark.sh	/^change_color() {$/;"	f
+change_color	grayblocks/scripts/colors-light.sh	/^change_color() {$/;"	f
+change_color	grayblocks/scripts/pywal.sh	/^change_color() {$/;"	f
+change_color	grayblocks/scripts/random.sh	/^change_color() {$/;"	f
+charging	grayblocks/bars.ini	/^format-charging = <bar-capacity>$/;"	k	section:module/battery_bar
+charging	grayblocks/bars.ini	/^label-charging = %percentage%%$/;"	k	section:module/battery_bar
+charging	grayblocks/modules.ini	/^format-charging = <label-charging>$/;"	k	section:module/battery
+charging	grayblocks/modules.ini	/^label-charging = %percentage%%$/;"	k	section:module/battery
 checkotherwm	dwm.c	/^checkotherwm(void)$/;"	f	typeref:typename:void
 class	dwm.c	/^	const char *class;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:const char *	file:
 clean	Makefile	/^clean:$/;"	t
 cleanup	dwm.c	/^cleanup(void)$/;"	f	typeref:typename:void
 cleanupmon	dwm.c	/^cleanupmon(Monitor *mon)$/;"	f	typeref:typename:void
 click	dwm.c	/^	unsigned int click;$/;"	m	struct:__anon0f53a99e0708	typeref:typename:unsigned int	file:
+click	grayblocks/config.ini	/^cursor-click = $/;"	k	section:bar/main
+click	grayblocks/modules.ini	/^enable-click = true$/;"	k	section:module/workspaces
+click	grayblocks/preview.ini	/^cursor-click = $/;"	k	section:bar/bottom
 clientmessage	dwm.c	/^clientmessage(XEvent *e)$/;"	f	typeref:typename:void
 clients	dwm.c	/^	Client *clients;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
+close	grayblocks/user_modules.ini	/^label-close =  $/;"	k	section:module/powermenu
+close	grayblocks/user_modules.ini	/^label-close = $/;"	k	section:module/menu
 codepoint	drw.c	/^	static struct { long codepoint[nomatches_len]; unsigned int idx; } nomatches;$/;"	m	struct:drw_text::__anon0f5116430208	typeref:typename:long[]	file:
 col_cyan	config.def.h	/^static const char col_cyan[]        = "#005577";$/;"	v	typeref:typename:const char[]
 col_cyan	config.h	/^static const char col_cyan[]        = "#005577";$/;"	v	typeref:typename:const char[]
@@ -324,29 +526,58 @@ col_gray3	config.def.h	/^static const char col_gray3[]       = "#bbbbbb";$/;"	v	
 col_gray3	config.h	/^static const char col_gray3[]       = "#bbbbbb";$/;"	v	typeref:typename:const char[]
 col_gray4	config.def.h	/^static const char col_gray4[]       = "#eeeeee";$/;"	v	typeref:typename:const char[]
 col_gray4	config.h	/^static const char col_gray4[]       = "#eeeeee";$/;"	v	typeref:typename:const char[]
+color	grayblocks/colors.ini	/^[color]$/;"	s
+color	grayblocks/config.ini	/^border-top-color = ${color.primary}$/;"	k	section:bar/main
+color	grayblocks/config.ini	/^line-color = ${color.background}$/;"	k	section:bar/main
+color	grayblocks/preview.ini	/^border-top-color = ${color.primary}$/;"	k	section:bar/main
+color	grayblocks/preview.ini	/^line-color = ${color.background}$/;"	k	section:bar/main
 colors	config.def.h	/^static const char *colors[][3]      = {$/;"	v	typeref:typename:const char * [][3]
 colors	config.h	/^static const char *colors[][3]      = {$/;"	v	typeref:typename:const char * [][3]
 config.h	Makefile	/^config.h:$/;"	t
 configure	dwm.c	/^configure(Client *c)$/;"	f	typeref:typename:void
 configurenotify	dwm.c	/^configurenotify(XEvent *e)$/;"	f	typeref:typename:void
 configurerequest	dwm.c	/^configurerequest(XEvent *e)$/;"	f	typeref:typename:void
+confirm_exit	grayblocks/scripts/powermenu.sh	/^confirm_exit() {$/;"	f
+connected	grayblocks/modules.ini	/^format-connected = <label-connected>$/;"	k	section:module/network
+connected	grayblocks/modules.ini	/^label-connected = "%{A1:networkmanager_dmenu &:} %essid%%{A}"$/;"	k	section:module/network
+consume	grayblocks/bars.ini	/^icon-consume =$/;"	k	section:module/mpd_bar
+consume	grayblocks/modules.ini	/^icon-consume =$/;"	k	section:module/mpd
+content	grayblocks/user_modules.ini	/^content = |$/;"	k	section:module/sep
+content	grayblocks/user_modules.ini	/^content = $/;"	k	section:module/browser
+content	grayblocks/user_modules.ini	/^content = $/;"	k	section:module/color-switch
+content	grayblocks/user_modules.ini	/^content = $/;"	k	section:module/files
+content	grayblocks/user_modules.ini	/^content = $/;"	k	section:module/launcher
+content	grayblocks/user_modules.ini	/^content = $/;"	k	section:module/sysmenu
+content	grayblocks/user_modules.ini	/^content = $/;"	k	section:module/settings
+content	grayblocks/user_modules.ini	/^content = $/;"	k	section:module/term
 createmon	dwm.c	/^createmon(void)$/;"	f	typeref:typename:Monitor *
 cursor	drw.h	/^	Cursor cursor;$/;"	m	struct:__anon0f5116480108	typeref:typename:Cursor
 cursor	dwm.c	/^static Cur *cursor[CurLast];$/;"	v	typeref:typename:Cur * []	file:
 deck	vanitygaps.c	/^deck(Monitor *m)$/;"	f	typeref:typename:void
+default	grayblocks/modules.ini	/^icon-default = $/;"	k	section:module/workspaces
 defaultgaps	vanitygaps.c	/^defaultgaps(const Arg *arg)$/;"	f	typeref:typename:void
 destroynotify	dwm.c	/^destroynotify(XEvent *e)$/;"	f	typeref:typename:void
 detach	dwm.c	/^detach(Client *c)$/;"	f	typeref:typename:void
+detached	grayblocks/config.ini	/^tray-detached = false$/;"	k	section:bar/main
+detached	grayblocks/preview.ini	/^tray-detached = false$/;"	k	section:bar/bottom
 detachstack	dwm.c	/^detachstack(Client *c)$/;"	f	typeref:typename:void
 die	util.c	/^die(const char *fmt, ...)$/;"	f	typeref:typename:void
 dirtomon	dwm.c	/^dirtomon(int dir)$/;"	f	typeref:typename:Monitor *
+discharging	grayblocks/bars.ini	/^format-discharging = <bar-capacity>$/;"	k	section:module/battery_bar
+discharging	grayblocks/bars.ini	/^label-discharging = %percentage%%$/;"	k	section:module/battery_bar
+discharging	grayblocks/modules.ini	/^format-discharging = <label-discharging>$/;"	k	section:module/battery
+discharging	grayblocks/modules.ini	/^label-discharging = %percentage%%$/;"	k	section:module/battery
+disconnected	grayblocks/modules.ini	/^format-disconnected = <label-disconnected>$/;"	k	section:module/network
+disconnected	grayblocks/modules.ini	/^label-disconnected = "%{A1:networkmanager_dmenu &:} Offline%{A}"$/;"	k	section:module/network
 dist	Makefile	/^dist: clean$/;"	t
-dmenucmd	config.def.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/polybar\/hack\/scripts\/launche/;"	v	typeref:typename:const char * []
-dmenucmd	config.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/polybar\/hack\/scripts\/launche/;"	v	typeref:typename:const char * []
+dmenucmd	config.def.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/polybar\/grayblocks\/scripts\/l/;"	v	typeref:typename:const char * []
+dmenucmd	config.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/polybar\/grayblocks\/scripts\/l/;"	v	typeref:typename:const char * []
 dmenufont	config.def.h	/^static const char dmenufont[]       = "monospace:size=10";$/;"	v	typeref:typename:const char[]
 dmenufont	config.h	/^static const char dmenufont[]       = "monospace:size=10";$/;"	v	typeref:typename:const char[]
 dmenumon	config.def.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
 dmenumon	config.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
+down	grayblocks/config.ini	/^scroll-down =$/;"	k	section:bar/main
+down	grayblocks/preview.ini	/^scroll-down =$/;"	k	section:bar/bottom
 dpy	drw.h	/^	Display *dpy;$/;"	m	struct:Fnt	typeref:typename:Display *
 dpy	drw.h	/^	Display *dpy;$/;"	m	struct:__anon0f5116480308	typeref:typename:Display *
 dpy	dwm.c	/^static Display *dpy;$/;"	v	typeref:typename:Display *	file:
@@ -375,11 +606,53 @@ dwindle	vanitygaps.c	/^dwindle(Monitor *m)$/;"	f	typeref:typename:void
 dwm	Makefile	/^dwm: ${OBJ}$/;"	t
 dwmdir	dwm.c	/^static const char dwmdir[] = "dwm";$/;"	v	typeref:typename:const char[]	file:
 ecalloc	util.c	/^ecalloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
+ellipsis	grayblocks/bars.ini	/^label-song-ellipsis = true$/;"	k	section:module/mpd_bar
+ellipsis	grayblocks/modules.ini	/^label-song-ellipsis = true$/;"	k	section:module/mpd
+empty	grayblocks/bars.ini	/^bar-capacity-empty = ${bar.empty}$/;"	k	section:module/battery_bar
+empty	grayblocks/bars.ini	/^bar-empty = ${bar.empty}$/;"	k	section:module/brightness
+empty	grayblocks/bars.ini	/^bar-load-empty = ${bar.empty}$/;"	k	section:module/cpu_bar
+empty	grayblocks/bars.ini	/^bar-progress-empty = ${bar.empty}$/;"	k	section:module/mpd_bar
+empty	grayblocks/bars.ini	/^bar-used-empty = ${bar.empty}$/;"	k	section:module/filesystem_bar
+empty	grayblocks/bars.ini	/^bar-used-empty = ${bar.empty}$/;"	k	section:module/memory_bar
+empty	grayblocks/bars.ini	/^bar-volume-empty = ${bar.empty}$/;"	k	section:module/volume
+empty	grayblocks/bars.ini	/^empty = $/;"	k	section:bar
+empty	grayblocks/modules.ini	/^label-empty = %icon%$/;"	k	section:module/workspaces
+empty	grayblocks/modules.ini	/^label-empty = Desktop$/;"	k	section:module/title
 enablegaps	vanitygaps.c	/^static int enablegaps = 1;$/;"	v	typeref:typename:int	file:
 enternotify	dwm.c	/^enternotify(XEvent *e)$/;"	f	typeref:typename:void
+error	grayblocks/scripts/checkupdates	/^error() {$/;"	f
+exec	grayblocks/user_modules.ini	/^exec = ~\/.config\/polybar\/grayblocks\/scripts\/updates.sh$/;"	k	section:module/updates
+exec	grayblocks/user_modules.ini	/^menu-0-0-exec = menu-open-1$/;"	k	section:module/powermenu
+exec	grayblocks/user_modules.ini	/^menu-0-0-exec = ~\/.config\/polybar\/grayblocks\/scripts\/launcher.sh &$/;"	k	section:module/menu
+exec	grayblocks/user_modules.ini	/^menu-0-1-exec = menu-open-2$/;"	k	section:module/powermenu
+exec	grayblocks/user_modules.ini	/^menu-0-1-exec = thunar &$/;"	k	section:module/menu
+exec	grayblocks/user_modules.ini	/^menu-0-2-exec = termite &$/;"	k	section:module/menu
+exec	grayblocks/user_modules.ini	/^menu-0-3-exec = firefox &$/;"	k	section:module/menu
+exec	grayblocks/user_modules.ini	/^menu-1-0-exec = menu-open-0$/;"	k	section:module/powermenu
+exec	grayblocks/user_modules.ini	/^menu-1-1-exec = systemctl reboot$/;"	k	section:module/powermenu
+exec	grayblocks/user_modules.ini	/^menu-2-0-exec = systemctl poweroff$/;"	k	section:module/powermenu
+exec	grayblocks/user_modules.ini	/^menu-2-1-exec = menu-open-0$/;"	k	section:module/powermenu
 expose	dwm.c	/^expose(XEvent *e)$/;"	f	typeref:typename:void
 f	dwm.c	/^	float f;$/;"	m	union:__anon0f53a99e060a	typeref:typename:float	file:
+fallback	grayblocks/config.ini	/^monitor-fallback =$/;"	k	section:bar/main
+fallback	grayblocks/preview.ini	/^monitor-fallback =$/;"	k	section:bar/main
 fibonacci	vanitygaps.c	/^fibonacci(Monitor *m, int s)$/;"	f	typeref:typename:void
+file	grayblocks/config.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/bars.ini$/;"	k	section:global/wm
+file	grayblocks/config.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/colors.ini$/;"	k	section:global/wm
+file	grayblocks/config.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/modules.ini$/;"	k	section:global/wm
+file	grayblocks/config.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/user_modules.ini$/;"	k	section:global/wm
+file	grayblocks/preview.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/bars.ini$/;"	k	section:global/wm
+file	grayblocks/preview.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/colors.ini$/;"	k	section:global/wm
+file	grayblocks/preview.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/modules.ini$/;"	k	section:global/wm
+file	grayblocks/preview.ini	/^include-file = ~\/.config\/polybar\/grayblocks\/user_modules.ini$/;"	k	section:global/wm
+fill	grayblocks/bars.ini	/^bar-capacity-fill = ${bar.fill}$/;"	k	section:module/battery_bar
+fill	grayblocks/bars.ini	/^bar-fill = ${bar.fill}$/;"	k	section:module/brightness
+fill	grayblocks/bars.ini	/^bar-load-fill = ${bar.fill}$/;"	k	section:module/cpu_bar
+fill	grayblocks/bars.ini	/^bar-progress-fill = ${bar.fill}$/;"	k	section:module/mpd_bar
+fill	grayblocks/bars.ini	/^bar-used-fill = ${bar.fill}$/;"	k	section:module/filesystem_bar
+fill	grayblocks/bars.ini	/^bar-used-fill = ${bar.fill}$/;"	k	section:module/memory_bar
+fill	grayblocks/bars.ini	/^bar-volume-fill = ${bar.fill}$/;"	k	section:module/volume
+fill	grayblocks/bars.ini	/^fill = $/;"	k	section:bar
 focus	dwm.c	/^focus(Client *c)$/;"	f	typeref:typename:void
 focusin	dwm.c	/^focusin(XEvent *e)$/;"	f	typeref:typename:void
 focusmon	dwm.c	/^focusmon(const Arg *arg)$/;"	f	typeref:typename:void
@@ -387,6 +660,102 @@ focusstack	dwm.c	/^focusstack(const Arg *arg)$/;"	f	typeref:typename:void
 fonts	config.def.h	/^static const char *fonts[]          = { "monospace:size=10" };$/;"	v	typeref:typename:const char * []
 fonts	config.h	/^static const char *fonts[]          = { "monospace:size=10" };$/;"	v	typeref:typename:const char * []
 fonts	drw.h	/^	Fnt *fonts;$/;"	m	struct:__anon0f5116480308	typeref:typename:Fnt *
+for	grayblocks/config.ini	/^throttle-output-for = 10$/;"	k	section:settings
+for	grayblocks/preview.ini	/^throttle-output-for = 10$/;"	k	section:settings
+foreground	grayblocks/bars.ini	/^bar-capacity-empty-foreground = ${color.foreground}$/;"	k	section:module/battery_bar
+foreground	grayblocks/bars.ini	/^bar-capacity-indicator-foreground = ${color.foreground}$/;"	k	section:module/battery_bar
+foreground	grayblocks/bars.ini	/^bar-empty-foreground = ${color.foreground}$/;"	k	section:module/brightness
+foreground	grayblocks/bars.ini	/^bar-indicator-foreground = ${color.foreground}$/;"	k	section:module/brightness
+foreground	grayblocks/bars.ini	/^bar-load-empty-foreground = ${color.foreground}$/;"	k	section:module/cpu_bar
+foreground	grayblocks/bars.ini	/^bar-load-indicator-foreground = ${color.foreground}$/;"	k	section:module/cpu_bar
+foreground	grayblocks/bars.ini	/^bar-progress-empty-foreground = ${color.foreground}$/;"	k	section:module/mpd_bar
+foreground	grayblocks/bars.ini	/^bar-progress-indicator-foreground = ${color.foreground}$/;"	k	section:module/mpd_bar
+foreground	grayblocks/bars.ini	/^bar-used-empty-foreground = ${color.foreground}$/;"	k	section:module/filesystem_bar
+foreground	grayblocks/bars.ini	/^bar-used-empty-foreground = ${color.foreground}$/;"	k	section:module/memory_bar
+foreground	grayblocks/bars.ini	/^bar-used-indicator-foreground = ${color.foreground}$/;"	k	section:module/filesystem_bar
+foreground	grayblocks/bars.ini	/^bar-used-indicator-foreground = ${color.foreground}$/;"	k	section:module/memory_bar
+foreground	grayblocks/bars.ini	/^bar-volume-empty-foreground = ${color.foreground}$/;"	k	section:module/volume
+foreground	grayblocks/bars.ini	/^bar-volume-indicator-foreground = ${color.foreground}$/;"	k	section:module/volume
+foreground	grayblocks/bars.ini	/^format-charging-foreground = ${color.foreground}$/;"	k	section:module/battery_bar
+foreground	grayblocks/bars.ini	/^format-discharging-foreground = ${color.foreground}$/;"	k	section:module/battery_bar
+foreground	grayblocks/bars.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/brightness
+foreground	grayblocks/bars.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/cpu_bar
+foreground	grayblocks/bars.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/memory_bar
+foreground	grayblocks/bars.ini	/^format-full-foreground = ${color.foreground}$/;"	k	section:module/battery_bar
+foreground	grayblocks/bars.ini	/^format-mounted-foreground = ${color.foreground}$/;"	k	section:module/filesystem_bar
+foreground	grayblocks/bars.ini	/^format-muted-foreground = ${color.foreground}$/;"	k	section:module/volume
+foreground	grayblocks/bars.ini	/^format-offline-foreground = ${color.foreground}$/;"	k	section:module/mpd_bar
+foreground	grayblocks/bars.ini	/^format-online-foreground = ${color.foreground}$/;"	k	section:module/mpd_bar
+foreground	grayblocks/bars.ini	/^format-unmounted-foreground = ${color.foreground}$/;"	k	section:module/filesystem_bar
+foreground	grayblocks/bars.ini	/^format-volume-foreground = ${color.foreground}$/;"	k	section:module/volume
+foreground	grayblocks/bars.ini	/^label-muted-foreground = ${color.red}$/;"	k	section:module/volume
+foreground	grayblocks/bars.ini	/^toggle-off-foreground = ${color.secondary}$/;"	k	section:module/mpd_bar
+foreground	grayblocks/bars.ini	/^toggle-on-foreground = ${color.primary}$/;"	k	section:module/mpd_bar
+foreground	grayblocks/colors.ini	/^foreground = #0A1A31$/;"	k	section:color
+foreground	grayblocks/config.ini	/^compositing-foreground = over$/;"	k	section:settings
+foreground	grayblocks/config.ini	/^foreground = ${color.foreground}$/;"	k	section:bar/main
+foreground	grayblocks/modules.ini	/^format-charging-foreground = ${color.foreground}$/;"	k	section:module/battery
+foreground	grayblocks/modules.ini	/^format-connected-foreground = ${color.foreground}$/;"	k	section:module/network
+foreground	grayblocks/modules.ini	/^format-discharging-foreground = ${color.foreground}$/;"	k	section:module/battery
+foreground	grayblocks/modules.ini	/^format-disconnected-foreground = ${color.foreground}$/;"	k	section:module/network
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground-alt}$/;"	k	section:module/title
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/backlight
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/cpu
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/date
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/keyboard
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/memory
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/temperature
+foreground	grayblocks/modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/workspaces
+foreground	grayblocks/modules.ini	/^format-full-foreground = ${color.foreground}$/;"	k	section:module/battery
+foreground	grayblocks/modules.ini	/^format-mounted-foreground = ${color.foreground}$/;"	k	section:module/filesystem
+foreground	grayblocks/modules.ini	/^format-muted-foreground = ${color.foreground}$/;"	k	section:module/alsa
+foreground	grayblocks/modules.ini	/^format-muted-foreground = ${color.foreground}$/;"	k	section:module/pulseaudio
+foreground	grayblocks/modules.ini	/^format-offline-foreground = ${color.foreground-alt}$/;"	k	section:module/mpd
+foreground	grayblocks/modules.ini	/^format-online-foreground = ${color.foreground-alt}$/;"	k	section:module/mpd
+foreground	grayblocks/modules.ini	/^format-unmounted-foreground = ${color.foreground}$/;"	k	section:module/filesystem
+foreground	grayblocks/modules.ini	/^format-volume-foreground = ${color.foreground}$/;"	k	section:module/alsa
+foreground	grayblocks/modules.ini	/^format-volume-foreground = ${color.foreground}$/;"	k	section:module/pulseaudio
+foreground	grayblocks/modules.ini	/^format-warn-foreground = ${color.foreground}$/;"	k	section:module/temperature
+foreground	grayblocks/modules.ini	/^label-active-foreground = ${color.primary}$/;"	k	section:module/workspaces
+foreground	grayblocks/modules.ini	/^label-indicator-on-foreground = ${color.primary}$/;"	k	section:module/keyboard
+foreground	grayblocks/modules.ini	/^label-muted-foreground = ${color.red}$/;"	k	section:module/alsa
+foreground	grayblocks/modules.ini	/^label-muted-foreground = ${color.red}$/;"	k	section:module/pulseaudio
+foreground	grayblocks/modules.ini	/^label-occupied-foreground = ${color.yellow}$/;"	k	section:module/workspaces
+foreground	grayblocks/modules.ini	/^label-urgent-foreground = ${color.red}$/;"	k	section:module/workspaces
+foreground	grayblocks/modules.ini	/^label-warn-foreground = ${color.red}$/;"	k	section:module/temperature
+foreground	grayblocks/modules.ini	/^toggle-off-foreground = ${color.red}$/;"	k	section:module/mpd
+foreground	grayblocks/modules.ini	/^toggle-on-foreground = ${color.primary}$/;"	k	section:module/mpd
+foreground	grayblocks/preview.ini	/^compositing-foreground = over$/;"	k	section:settings
+foreground	grayblocks/preview.ini	/^foreground = ${color.foreground}$/;"	k	section:bar/main
+foreground	grayblocks/user_modules.ini	/^content-foreground = ${color.background}$/;"	k	section:module/sep
+foreground	grayblocks/user_modules.ini	/^content-foreground = ${color.foreground-alt}$/;"	k	section:module/launcher
+foreground	grayblocks/user_modules.ini	/^content-foreground = ${color.foreground-alt}$/;"	k	section:module/sysmenu
+foreground	grayblocks/user_modules.ini	/^content-foreground = ${color.foreground}$/;"	k	section:module/apps
+foreground	grayblocks/user_modules.ini	/^content-foreground = ${color.foreground}$/;"	k	section:module/color-switch
+foreground	grayblocks/user_modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/menu
+foreground	grayblocks/user_modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/powermenu
+foreground	grayblocks/user_modules.ini	/^format-foreground = ${color.foreground}$/;"	k	section:module/updates
+format	grayblocks/bars.ini	/^format = <bar-load> <label>$/;"	k	section:module/cpu_bar
+format	grayblocks/bars.ini	/^format = <bar-used> <label>$/;"	k	section:module/memory_bar
+format	grayblocks/bars.ini	/^format = <ramp> <bar>$/;"	k	section:module/brightness
+format	grayblocks/bars.ini	/^time-format = %H:%M$/;"	k	section:module/battery_bar
+format	grayblocks/modules.ini	/^format = <label-layout> <label-indicator>$/;"	k	section:module/keyboard
+format	grayblocks/modules.ini	/^format = <label-state>$/;"	k	section:module/workspaces
+format	grayblocks/modules.ini	/^format = <label>$/;"	k	section:module/cpu
+format	grayblocks/modules.ini	/^format = <label>$/;"	k	section:module/date
+format	grayblocks/modules.ini	/^format = <label>$/;"	k	section:module/memory
+format	grayblocks/modules.ini	/^format = <label>$/;"	k	section:module/title
+format	grayblocks/modules.ini	/^format = <ramp> <label>$/;"	k	section:module/backlight
+format	grayblocks/modules.ini	/^format = <ramp> <label>$/;"	k	section:module/temperature
+format	grayblocks/modules.ini	/^time-format = %H:%M$/;"	k	section:module/battery
+format	grayblocks/user_modules.ini	/^format = <label-toggle> <menu>$/;"	k	section:module/menu
+format	grayblocks/user_modules.ini	/^format = <label-toggle> <menu>$/;"	k	section:module/powermenu
+format	grayblocks/user_modules.ini	/^format = <label>$/;"	k	section:module/updates
+framerate	grayblocks/modules.ini	/^animation-charging-framerate = 750$/;"	k	section:module/battery
+full	grayblocks/bars.ini	/^format-full = <label-full>$/;"	k	section:module/battery_bar
+full	grayblocks/bars.ini	/^label-full = " Full"$/;"	k	section:module/battery_bar
+full	grayblocks/modules.ini	/^format-full = <label-full>$/;"	k	section:module/battery
+full	grayblocks/modules.ini	/^label-full = Full$/;"	k	section:module/battery
 func	dwm.c	/^	void (*func)(const Arg *);$/;"	m	struct:__anon0f53a99e0808	typeref:typename:void (*)(const Arg *)	file:
 func	dwm.c	/^	void (*func)(const Arg *arg);$/;"	m	struct:__anon0f53a99e0708	typeref:typename:void (*)(const Arg * arg)	file:
 gaplessgrid	vanitygaps.c	/^gaplessgrid(Monitor *m)$/;"	f	typeref:typename:void
@@ -403,19 +772,33 @@ gappov	config.def.h	/^static const unsigned int gappov    = 10;       \/* vert o
 gappov	config.h	/^static const unsigned int gappov    = 10;       \/* vert outer gap between windows and screen ed/;"	v	typeref:typename:const unsigned int
 gappov	dwm.c	/^	int gappov;           \/* vertical outer gaps *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 gc	drw.h	/^	GC gc;$/;"	m	struct:__anon0f5116480308	typeref:typename:GC
+get_random_color	grayblocks/scripts/random.sh	/^get_random_color() {$/;"	f
+get_random_number	grayblocks/scripts/random.sh	/^get_random_number() {$/;"	f
+get_total_updates	grayblocks/scripts/updates.sh	/^get_total_updates() { UPDATES=$(~\/.config\/polybar\/grayblocks\/scripts\/checkupdates 2>\/dev\//;"	f
 getatomprop	dwm.c	/^getatomprop(Client *c, Atom prop)$/;"	f	typeref:typename:Atom
 getfacts	vanitygaps.c	/^getfacts(Monitor *m, int msize, int ssize, float *mf, float *sf, int *mr, int *sr)$/;"	f	typeref:typename:void
 getgaps	vanitygaps.c	/^getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc)$/;"	f	typeref:typename:void
 getrootptr	dwm.c	/^getrootptr(int *x, int *y)$/;"	f	typeref:typename:int
 getstate	dwm.c	/^getstate(Window w)$/;"	f	typeref:typename:long
 gettextprop	dwm.c	/^gettextprop(Window w, Atom atom, char *text, unsigned int size)$/;"	f	typeref:typename:int
+global/wm	grayblocks/config.ini	/^[global\/wm]$/;"	s
+global/wm	grayblocks/preview.ini	/^[global\/wm]$/;"	s
 grabbuttons	dwm.c	/^grabbuttons(Client *c, int focused)$/;"	f	typeref:typename:void
 grabkeys	dwm.c	/^grabkeys(void)$/;"	f	typeref:typename:void
+gradient	grayblocks/bars.ini	/^bar-capacity-gradient = false$/;"	k	section:module/battery_bar
+gradient	grayblocks/bars.ini	/^bar-gradient = false$/;"	k	section:module/brightness
+gradient	grayblocks/bars.ini	/^bar-load-gradient = false$/;"	k	section:module/cpu_bar
+gradient	grayblocks/bars.ini	/^bar-progress-gradient = false$/;"	k	section:module/mpd_bar
+gradient	grayblocks/bars.ini	/^bar-used-gradient = false$/;"	k	section:module/filesystem_bar
+gradient	grayblocks/bars.ini	/^bar-used-gradient = false$/;"	k	section:module/memory_bar
+gradient	grayblocks/bars.ini	/^bar-volume-gradient = false$/;"	k	section:module/volume
 grid	vanitygaps.c	/^grid(Monitor *m)$/;"	f	typeref:typename:void
 h	drw.h	/^	unsigned int h;$/;"	m	struct:Fnt	typeref:typename:unsigned int
 h	drw.h	/^	unsigned int w, h;$/;"	m	struct:__anon0f5116480308	typeref:typename:unsigned int
 h	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
 handler	dwm.c	/^static void (*handler[LASTEvent]) (XEvent *) = {$/;"	v	typeref:typename:void (* [LASTEvent])(XEvent *)	file:
+height	grayblocks/config.ini	/^height = 40$/;"	k	section:bar/main
+height	grayblocks/preview.ini	/^height = 40$/;"	k	section:bar/main
 hintsvalid	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
 horizgrid	vanitygaps.c	/^horizgrid(Monitor *m) {$/;"	f	typeref:typename:void
 i	dwm.c	/^	int i;$/;"	m	union:__anon0f53a99e060a	typeref:typename:int	file:
@@ -430,8 +813,47 @@ incrogaps	vanitygaps.c	/^incrogaps(const Arg *arg)$/;"	f	typeref:typename:void
 incrohgaps	vanitygaps.c	/^incrohgaps(const Arg *arg)$/;"	f	typeref:typename:void
 incrovgaps	vanitygaps.c	/^incrovgaps(const Arg *arg)$/;"	f	typeref:typename:void
 incw	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
+indicator	grayblocks/bars.ini	/^bar-capacity-indicator = ${bar.indicator}$/;"	k	section:module/battery_bar
+indicator	grayblocks/bars.ini	/^bar-indicator = ${bar.indicator}$/;"	k	section:module/brightness
+indicator	grayblocks/bars.ini	/^bar-load-indicator = ${bar.indicator}$/;"	k	section:module/cpu_bar
+indicator	grayblocks/bars.ini	/^bar-progress-indicator = ${bar.indicator}$/;"	k	section:module/mpd_bar
+indicator	grayblocks/bars.ini	/^bar-used-indicator = ${bar.indicator}$/;"	k	section:module/filesystem_bar
+indicator	grayblocks/bars.ini	/^bar-used-indicator = ${bar.indicator}$/;"	k	section:module/memory_bar
+indicator	grayblocks/bars.ini	/^bar-volume-indicator = ${bar.indicator}$/;"	k	section:module/volume
+indicator	grayblocks/bars.ini	/^indicator = ⏽$/;"	k	section:bar
+inherit	grayblocks/preview.ini	/^inherit = bar\/main$/;"	k	section:bar/bottom
+inherit	grayblocks/preview.ini	/^inherit = bar\/main$/;"	k	section:bar/mid
+inherit	grayblocks/preview.ini	/^inherit = bar\/main$/;"	k	section:bar/top
+inherit	grayblocks/user_modules.ini	/^inherit = module\/apps$/;"	k	section:module/browser
+inherit	grayblocks/user_modules.ini	/^inherit = module\/apps$/;"	k	section:module/files
+inherit	grayblocks/user_modules.ini	/^inherit = module\/apps$/;"	k	section:module/settings
+inherit	grayblocks/user_modules.ini	/^inherit = module\/apps$/;"	k	section:module/term
 install	Makefile	/^install: all$/;"	t
 instance	dwm.c	/^	const char *instance;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:const char *	file:
+interface	grayblocks/modules.ini	/^interface = eth0$/;"	k	section:module/wired-network
+interface	grayblocks/modules.ini	/^interface = wlan0$/;"	k	section:module/network
+interface	grayblocks/modules.ini	/^interface = wlp3s0$/;"	k	section:module/wireless-network
+interval	grayblocks/bars.ini	/^interval = 0.5$/;"	k	section:module/cpu_bar
+interval	grayblocks/bars.ini	/^interval = 1$/;"	k	section:module/mpd_bar
+interval	grayblocks/bars.ini	/^interval = 2$/;"	k	section:module/memory_bar
+interval	grayblocks/bars.ini	/^interval = 30$/;"	k	section:module/filesystem_bar
+interval	grayblocks/bars.ini	/^interval = 5$/;"	k	section:module/volume
+interval	grayblocks/bars.ini	/^poll-interval = 2$/;"	k	section:module/battery_bar
+interval	grayblocks/modules.ini	/^interval = 0.5$/;"	k	section:module/temperature
+interval	grayblocks/modules.ini	/^interval = 1$/;"	k	section:module/cpu
+interval	grayblocks/modules.ini	/^interval = 1$/;"	k	section:module/memory
+interval	grayblocks/modules.ini	/^interval = 1$/;"	k	section:module/mpd
+interval	grayblocks/modules.ini	/^interval = 1.0$/;"	k	section:module/date
+interval	grayblocks/modules.ini	/^interval = 1.0$/;"	k	section:module/network
+interval	grayblocks/modules.ini	/^interval = 30$/;"	k	section:module/filesystem
+interval	grayblocks/modules.ini	/^interval = 5$/;"	k	section:module/alsa
+interval	grayblocks/modules.ini	/^interval = 5$/;"	k	section:module/pulseaudio
+interval	grayblocks/modules.ini	/^poll-interval = 2$/;"	k	section:module/battery
+interval	grayblocks/user_modules.ini	/^interval = 5$/;"	k	section:module/updates
+ipc	grayblocks/config.ini	/^enable-ipc = true$/;"	k	section:bar/main
+ipc	grayblocks/preview.ini	/^enable-ipc = true$/;"	k	section:bar/bottom
+ipc	grayblocks/preview.ini	/^enable-ipc = true$/;"	k	section:bar/mid
+ipc	grayblocks/preview.ini	/^enable-ipc = true$/;"	k	section:bar/top
 isfixed	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
 isfloating	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
 isfloating	dwm.c	/^	int isfloating;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:int	file:
@@ -443,9 +865,39 @@ keys	config.def.h	/^static const Key keys[] = {$/;"	v	typeref:typename:const Key
 keys	config.h	/^static const Key keys[] = {$/;"	v	typeref:typename:const Key[]
 keysym	dwm.c	/^	KeySym keysym;$/;"	m	struct:__anon0f53a99e0808	typeref:typename:KeySym	file:
 killclient	dwm.c	/^killclient(const Arg *arg)$/;"	f	typeref:typename:void
+label	grayblocks/bars.ini	/^label = "%mb_used%"$/;"	k	section:module/memory_bar
+label	grayblocks/bars.ini	/^label = "%percentage%%"$/;"	k	section:module/cpu_bar
+label	grayblocks/bars.ini	/^label = %percentage%%$/;"	k	section:module/brightness
+label	grayblocks/modules.ini	/^label = " %mb_used%"$/;"	k	section:module/memory
+label	grayblocks/modules.ini	/^label = " %percentage%%"$/;"	k	section:module/cpu
+label	grayblocks/modules.ini	/^label = " %title%"$/;"	k	section:module/title
+label	grayblocks/modules.ini	/^label = %percentage%%$/;"	k	section:module/backlight
+label	grayblocks/modules.ini	/^label = %temperature-c%$/;"	k	section:module/temperature
+label	grayblocks/modules.ini	/^label = %time%$/;"	k	section:module/date
+label	grayblocks/user_modules.ini	/^label = %output%$/;"	k	section:module/updates
+layout	grayblocks/modules.ini	/^label-layout = " %layout%"$/;"	k	section:module/keyboard
 layouts	config.def.h	/^static const Layout layouts[] = {$/;"	v	typeref:typename:const Layout[]
 layouts	config.h	/^static const Layout layouts[] = {$/;"	v	typeref:typename:const Layout[]
+left	grayblocks/config.ini	/^click-left = $/;"	k	section:bar/main
+left	grayblocks/config.ini	/^double-click-left =$/;"	k	section:bar/main
+left	grayblocks/config.ini	/^module-margin-left = 0$/;"	k	section:bar/main
+left	grayblocks/config.ini	/^modules-left = launcher sep title sep workspaces sep cpu sep memory$/;"	k	section:bar/main
+left	grayblocks/preview.ini	/^click-left = $/;"	k	section:bar/bottom
+left	grayblocks/preview.ini	/^double-click-left =$/;"	k	section:bar/bottom
+left	grayblocks/preview.ini	/^module-margin-left = 0$/;"	k	section:bar/main
+left	grayblocks/preview.ini	/^modules-left = launcher workspaces sep cpu sep memory$/;"	k	section:bar/top
+left	grayblocks/preview.ini	/^modules-left = sep menu sep term files browser settings sep filesystem sep temperature$/;"	k	section:bar/bottom
+left	grayblocks/user_modules.ini	/^click-left = exo-open --launch TerminalEmulator &$/;"	k	section:module/updates
+left	grayblocks/user_modules.ini	/^click-left = firefox &$/;"	k	section:module/browser
+left	grayblocks/user_modules.ini	/^click-left = termite &$/;"	k	section:module/term
+left	grayblocks/user_modules.ini	/^click-left = thunar &$/;"	k	section:module/files
+left	grayblocks/user_modules.ini	/^click-left = xfce4-settings-manager &$/;"	k	section:module/settings
+left	grayblocks/user_modules.ini	/^click-left = ~\/.config\/polybar\/grayblocks\/scripts\/color-switch.sh &$/;"	k	section:module/color-switch
+left	grayblocks/user_modules.ini	/^click-left = ~\/.config\/polybar\/grayblocks\/scripts\/launcher.sh &$/;"	k	section:module/launcher
+left	grayblocks/user_modules.ini	/^click-left = ~\/.config\/polybar\/grayblocks\/scripts\/powermenu.sh &$/;"	k	section:module/sysmenu
 limitexceeded	dwm.c	/^struct NumTags { char limitexceeded[LENGTH(tags) > 31 ? -1 : 1]; };$/;"	m	struct:NumTags	typeref:typename:char[]	file:
+locale	grayblocks/config.ini	/^locale = $/;"	k	section:bar/main
+locale	grayblocks/preview.ini	/^locale = $/;"	k	section:bar/bottom
 localshare	dwm.c	/^static const char localshare[] = ".local\/share";$/;"	v	typeref:typename:const char[]	file:
 lockfullscreen	config.def.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
 lockfullscreen	config.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
@@ -459,32 +911,100 @@ managealtbar	dwm.c	/^managealtbar(Window win, XWindowAttributes *wa)$/;"	f	typer
 mappingnotify	dwm.c	/^mappingnotify(XEvent *e)$/;"	f	typeref:typename:void
 maprequest	dwm.c	/^maprequest(XEvent *e)$/;"	f	typeref:typename:void
 mask	dwm.c	/^	unsigned int mask;$/;"	m	struct:__anon0f53a99e0708	typeref:typename:unsigned int	file:
+max	grayblocks/modules.ini	/^use-ui-max = false$/;"	k	section:module/pulseaudio
 maxa	dwm.c	/^	float mina, maxa;$/;"	m	struct:Client	typeref:typename:float	file:
 maxh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
+maxlen	grayblocks/bars.ini	/^label-song-maxlen = 25$/;"	k	section:module/mpd_bar
+maxlen	grayblocks/modules.ini	/^label-maxlen = 30$/;"	k	section:module/title
+maxlen	grayblocks/modules.ini	/^label-song-maxlen = 25$/;"	k	section:module/mpd
+maxsize	grayblocks/config.ini	/^tray-maxsize = 16$/;"	k	section:bar/main
+maxsize	grayblocks/preview.ini	/^tray-maxsize = 16$/;"	k	section:bar/bottom
 maxw	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
 mfact	config.def.h	/^static const float mfact     = 0.55; \/* factor of master area size [0.05..0.95] *\/$/;"	v	typeref:typename:const float
 mfact	config.h	/^static const float mfact     = 0.55; \/* factor of master area size [0.05..0.95] *\/$/;"	v	typeref:typename:const float
 mfact	dwm.c	/^	float mfact;$/;"	m	struct:Monitor	typeref:typename:float	file:
 mh	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+middle	grayblocks/config.ini	/^click-middle = $/;"	k	section:bar/main
+middle	grayblocks/config.ini	/^double-click-middle =$/;"	k	section:bar/main
+middle	grayblocks/preview.ini	/^click-middle = $/;"	k	section:bar/bottom
+middle	grayblocks/preview.ini	/^double-click-middle =$/;"	k	section:bar/bottom
+middle	grayblocks/user_modules.ini	/^click-middle = urxvt &$/;"	k	section:module/term
 mina	dwm.c	/^	float mina, maxa;$/;"	m	struct:Client	typeref:typename:float	file:
 minh	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
 minw	dwm.c	/^	int basew, baseh, incw, inch, maxw, maxh, minw, minh, hintsvalid;$/;"	m	struct:Client	typeref:typename:int	file:
+mixer	grayblocks/bars.ini	/^master-mixer = Master$/;"	k	section:module/volume
+mixer	grayblocks/modules.ini	/^master-mixer = Master$/;"	k	section:module/alsa
 mod	dwm.c	/^	unsigned int mod;$/;"	m	struct:__anon0f53a99e0808	typeref:typename:unsigned int	file:
+module/alsa	grayblocks/modules.ini	/^[module\/alsa]$/;"	s
+module/apps	grayblocks/user_modules.ini	/^[module\/apps]$/;"	s
+module/backlight	grayblocks/modules.ini	/^[module\/backlight]$/;"	s
+module/battery	grayblocks/modules.ini	/^[module\/battery]$/;"	s
+module/battery_bar	grayblocks/bars.ini	/^[module\/battery_bar]$/;"	s
+module/brightness	grayblocks/bars.ini	/^[module\/brightness]$/;"	s
+module/browser	grayblocks/user_modules.ini	/^[module\/browser]$/;"	s
+module/color-switch	grayblocks/user_modules.ini	/^[module\/color-switch]$/;"	s
+module/cpu	grayblocks/modules.ini	/^[module\/cpu]$/;"	s
+module/cpu_bar	grayblocks/bars.ini	/^[module\/cpu_bar]$/;"	s
+module/date	grayblocks/modules.ini	/^[module\/date]$/;"	s
+module/files	grayblocks/user_modules.ini	/^[module\/files]$/;"	s
+module/filesystem	grayblocks/modules.ini	/^[module\/filesystem]$/;"	s
+module/filesystem_bar	grayblocks/bars.ini	/^[module\/filesystem_bar]$/;"	s
+module/keyboard	grayblocks/modules.ini	/^[module\/keyboard]$/;"	s
+module/launcher	grayblocks/user_modules.ini	/^[module\/launcher]$/;"	s
+module/memory	grayblocks/modules.ini	/^[module\/memory]$/;"	s
+module/memory_bar	grayblocks/bars.ini	/^[module\/memory_bar]$/;"	s
+module/menu	grayblocks/user_modules.ini	/^[module\/menu]$/;"	s
+module/mpd	grayblocks/modules.ini	/^[module\/mpd]$/;"	s
+module/mpd_bar	grayblocks/bars.ini	/^[module\/mpd_bar]$/;"	s
+module/network	grayblocks/modules.ini	/^[module\/network]$/;"	s
+module/powermenu	grayblocks/user_modules.ini	/^[module\/powermenu]$/;"	s
+module/pulseaudio	grayblocks/modules.ini	/^[module\/pulseaudio]$/;"	s
+module/sep	grayblocks/user_modules.ini	/^[module\/sep]$/;"	s
+module/settings	grayblocks/user_modules.ini	/^[module\/settings]$/;"	s
+module/sysmenu	grayblocks/user_modules.ini	/^[module\/sysmenu]$/;"	s
+module/temperature	grayblocks/modules.ini	/^[module\/temperature]$/;"	s
+module/term	grayblocks/user_modules.ini	/^[module\/term]$/;"	s
+module/title	grayblocks/modules.ini	/^[module\/title]$/;"	s
+module/updates	grayblocks/user_modules.ini	/^[module\/updates]$/;"	s
+module/volume	grayblocks/bars.ini	/^[module\/volume]$/;"	s
+module/wired-network	grayblocks/modules.ini	/^[module\/wired-network]$/;"	s
+module/wireless-network	grayblocks/modules.ini	/^[module\/wireless-network]$/;"	s
+module/workspaces	grayblocks/modules.ini	/^[module\/workspaces]$/;"	s
 mon	dwm.c	/^	Monitor *mon;$/;"	m	struct:Client	typeref:typename:Monitor *	file:
 monitor	dwm.c	/^	int monitor;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:int	file:
+monitor	grayblocks/config.ini	/^monitor =$/;"	k	section:bar/main
+monitor	grayblocks/modules.ini	/^label-monitor = %name%$/;"	k	section:module/workspaces
+monitor	grayblocks/preview.ini	/^monitor =$/;"	k	section:bar/main
 monocle	dwm.c	/^monocle(Monitor *m)$/;"	f	typeref:typename:void
 mons	dwm.c	/^static Monitor *mons, *selmon;$/;"	v	typeref:typename:Monitor *	file:
 motionnotify	dwm.c	/^motionnotify(XEvent *e)$/;"	f	typeref:typename:void
+mounted	grayblocks/bars.ini	/^format-mounted = <bar-used> <label-mounted>$/;"	k	section:module/filesystem_bar
+mounted	grayblocks/bars.ini	/^label-mounted = %used%\/%total%$/;"	k	section:module/filesystem_bar
+mounted	grayblocks/modules.ini	/^format-mounted = <label-mounted>$/;"	k	section:module/filesystem
+mounted	grayblocks/modules.ini	/^label-mounted = " %free%"$/;"	k	section:module/filesystem
 movemouse	dwm.c	/^movemouse(const Arg *arg)$/;"	f	typeref:typename:void
+msg	grayblocks/scripts/checkupdates	/^msg() {$/;"	f
+msg	grayblocks/scripts/powermenu.sh	/^msg() {$/;"	f
+msg2	grayblocks/scripts/checkupdates	/^msg2() {$/;"	f
+muted	grayblocks/bars.ini	/^format-muted = <label-muted>$/;"	k	section:module/volume
+muted	grayblocks/bars.ini	/^label-muted = " Muted"$/;"	k	section:module/volume
+muted	grayblocks/modules.ini	/^format-muted = <label-muted>$/;"	k	section:module/alsa
+muted	grayblocks/modules.ini	/^format-muted = <label-muted>$/;"	k	section:module/pulseaudio
+muted	grayblocks/modules.ini	/^label-muted = " Muted"$/;"	k	section:module/alsa
+muted	grayblocks/modules.ini	/^label-muted = " Muted"$/;"	k	section:module/pulseaudio
 mw	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 mx	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 my	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 name	dwm.c	/^	char name[256];$/;"	m	struct:Client	typeref:typename:char[256]	file:
+name	grayblocks/config.ini	/^wm-name = $/;"	k	section:bar/main
+name	grayblocks/preview.ini	/^wm-name = $/;"	k	section:bar/bottom
 netatom	dwm.c	/^static Atom wmatom[WMLast], netatom[NetLast];$/;"	v	typeref:typename:Atom[]	file:
 neverfocus	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
 next	drw.h	/^	struct Fnt *next;$/;"	m	struct:Fnt	typeref:struct:Fnt *
 next	dwm.c	/^	Client *next;$/;"	m	struct:Client	typeref:typename:Client *	file:
 next	dwm.c	/^	Monitor *next;$/;"	m	struct:Monitor	typeref:typename:Monitor *	file:
+next	grayblocks/bars.ini	/^icon-next = $/;"	k	section:module/mpd_bar
+next	grayblocks/modules.ini	/^icon-next = $/;"	k	section:module/mpd
 nexttiled	dwm.c	/^nexttiled(Client *c)$/;"	f	typeref:typename:Client *
 nmaster	config.def.h	/^static const int nmaster     = 1;    \/* number of clients in master area *\/$/;"	v	typeref:typename:const int
 nmaster	config.h	/^static const int nmaster     = 1;    \/* number of clients in master area *\/$/;"	v	typeref:typename:const int
@@ -493,24 +1013,188 @@ nomatches_len	drw.c	/^	enum { nomatches_len = 64 };$/;"	e	enum:drw_text::__anon0
 nrowgrid	vanitygaps.c	/^nrowgrid(Monitor *m)$/;"	f	typeref:typename:void
 num	dwm.c	/^	int num;$/;"	m	struct:Monitor	typeref:typename:int	file:
 numlockmask	dwm.c	/^static unsigned int numlockmask = 0;$/;"	v	typeref:typename:unsigned int	file:
+occupied	grayblocks/modules.ini	/^label-occupied = %icon%$/;"	k	section:module/workspaces
+offline	grayblocks/bars.ini	/^format-offline = <label-offline>$/;"	k	section:module/mpd_bar
+offline	grayblocks/bars.ini	/^label-offline = " Offline"$/;"	k	section:module/mpd_bar
+offline	grayblocks/modules.ini	/^format-offline = <label-offline>$/;"	k	section:module/mpd
+offline	grayblocks/modules.ini	/^label-offline = " Offline"$/;"	k	section:module/mpd
 oldbw	dwm.c	/^	int bw, oldbw;$/;"	m	struct:Client	typeref:typename:int	file:
 oldh	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
 oldstate	dwm.c	/^	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;$/;"	m	struct:Client	typeref:typename:int	file:
 oldw	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
 oldx	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
 oldy	dwm.c	/^	int oldx, oldy, oldw, oldh;$/;"	m	struct:Client	typeref:typename:int	file:
+on	grayblocks/modules.ini	/^label-indicator-on = %name%$/;"	k	section:module/keyboard
+online	grayblocks/bars.ini	/^format-online = <label-song> <bar-progress> <label-time>$/;"	k	section:module/mpd_bar
+online	grayblocks/modules.ini	/^format-online = <label-song> <icon-prev> <toggle> <icon-next>$/;"	k	section:module/mpd
+open	grayblocks/user_modules.ini	/^label-open = $/;"	k	section:module/menu
+open	grayblocks/user_modules.ini	/^label-open = $/;"	k	section:module/powermenu
 options	Makefile	/^options:$/;"	t
+output	grayblocks/config.ini	/^throttle-output = 5$/;"	k	section:settings
+output	grayblocks/preview.ini	/^throttle-output = 5$/;"	k	section:settings
+overline	grayblocks/bars.ini	/^format-charging-overline = ${color.background}$/;"	k	section:module/battery_bar
+overline	grayblocks/bars.ini	/^format-discharging-overline = ${color.background}$/;"	k	section:module/battery_bar
+overline	grayblocks/bars.ini	/^format-full-overline = ${color.background}$/;"	k	section:module/battery_bar
+overline	grayblocks/bars.ini	/^format-mounted-overline = ${color.background}$/;"	k	section:module/filesystem_bar
+overline	grayblocks/bars.ini	/^format-muted-overline = ${color.background}$/;"	k	section:module/volume
+overline	grayblocks/bars.ini	/^format-offline-overline = ${color.background}$/;"	k	section:module/mpd_bar
+overline	grayblocks/bars.ini	/^format-online-overline = ${color.background}$/;"	k	section:module/mpd_bar
+overline	grayblocks/bars.ini	/^format-overline = ${color.background}$/;"	k	section:module/brightness
+overline	grayblocks/bars.ini	/^format-overline = ${color.background}$/;"	k	section:module/cpu_bar
+overline	grayblocks/bars.ini	/^format-overline = ${color.background}$/;"	k	section:module/memory_bar
+overline	grayblocks/bars.ini	/^format-unmounted-overline = ${color.background}$/;"	k	section:module/filesystem_bar
+overline	grayblocks/bars.ini	/^format-volume-overline = ${color.background}$/;"	k	section:module/volume
+overline	grayblocks/config.ini	/^compositing-overline = over$/;"	k	section:settings
+overline	grayblocks/modules.ini	/^format-charging-overline = ${color.background}$/;"	k	section:module/battery
+overline	grayblocks/modules.ini	/^format-connected-overline = ${color.background}$/;"	k	section:module/network
+overline	grayblocks/modules.ini	/^format-discharging-overline = ${color.background}$/;"	k	section:module/battery
+overline	grayblocks/modules.ini	/^format-disconnected-overline = ${color.background}$/;"	k	section:module/network
+overline	grayblocks/modules.ini	/^format-full-overline = ${color.background}$/;"	k	section:module/battery
+overline	grayblocks/modules.ini	/^format-mounted-overline = ${color.background}$/;"	k	section:module/filesystem
+overline	grayblocks/modules.ini	/^format-muted-overline = ${color.background}$/;"	k	section:module/alsa
+overline	grayblocks/modules.ini	/^format-muted-overline = ${color.background}$/;"	k	section:module/pulseaudio
+overline	grayblocks/modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/backlight
+overline	grayblocks/modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/cpu
+overline	grayblocks/modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/date
+overline	grayblocks/modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/keyboard
+overline	grayblocks/modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/memory
+overline	grayblocks/modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/temperature
+overline	grayblocks/modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/workspaces
+overline	grayblocks/modules.ini	/^format-unmounted-overline = ${color.background}$/;"	k	section:module/filesystem
+overline	grayblocks/modules.ini	/^format-volume-overline = ${color.background}$/;"	k	section:module/alsa
+overline	grayblocks/modules.ini	/^format-volume-overline = ${color.background}$/;"	k	section:module/pulseaudio
+overline	grayblocks/modules.ini	/^format-warn-overline = ${color.background}$/;"	k	section:module/temperature
+overline	grayblocks/preview.ini	/^compositing-overline = over$/;"	k	section:settings
+overline	grayblocks/user_modules.ini	/^content-overline = ${color.background}$/;"	k	section:module/apps
+overline	grayblocks/user_modules.ini	/^content-overline = ${color.background}$/;"	k	section:module/color-switch
+overline	grayblocks/user_modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/menu
+overline	grayblocks/user_modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/powermenu
+overline	grayblocks/user_modules.ini	/^format-overline = ${color.background}$/;"	k	section:module/updates
+padding	grayblocks/bars.ini	/^format-charging-padding = 2$/;"	k	section:module/battery_bar
+padding	grayblocks/bars.ini	/^format-discharging-padding = 2$/;"	k	section:module/battery_bar
+padding	grayblocks/bars.ini	/^format-full-padding = 2$/;"	k	section:module/battery_bar
+padding	grayblocks/bars.ini	/^format-mounted-padding = 2$/;"	k	section:module/filesystem_bar
+padding	grayblocks/bars.ini	/^format-muted-padding = 2$/;"	k	section:module/volume
+padding	grayblocks/bars.ini	/^format-offline-padding = 2$/;"	k	section:module/mpd_bar
+padding	grayblocks/bars.ini	/^format-online-padding = 2$/;"	k	section:module/mpd_bar
+padding	grayblocks/bars.ini	/^format-padding = 2$/;"	k	section:module/brightness
+padding	grayblocks/bars.ini	/^format-padding = 2$/;"	k	section:module/cpu_bar
+padding	grayblocks/bars.ini	/^format-padding = 2$/;"	k	section:module/memory_bar
+padding	grayblocks/bars.ini	/^format-unmounted-padding = 2$/;"	k	section:module/filesystem_bar
+padding	grayblocks/bars.ini	/^format-volume-padding = 2$/;"	k	section:module/volume
+padding	grayblocks/config.ini	/^padding = 0$/;"	k	section:bar/main
+padding	grayblocks/config.ini	/^tray-padding = 0$/;"	k	section:bar/main
+padding	grayblocks/modules.ini	/^format-charging-padding = 2$/;"	k	section:module/battery
+padding	grayblocks/modules.ini	/^format-connected-padding = 2$/;"	k	section:module/network
+padding	grayblocks/modules.ini	/^format-discharging-padding = 2$/;"	k	section:module/battery
+padding	grayblocks/modules.ini	/^format-disconnected-padding = 2$/;"	k	section:module/network
+padding	grayblocks/modules.ini	/^format-full-padding = 2$/;"	k	section:module/battery
+padding	grayblocks/modules.ini	/^format-mounted-padding = 2$/;"	k	section:module/filesystem
+padding	grayblocks/modules.ini	/^format-muted-padding = 2$/;"	k	section:module/alsa
+padding	grayblocks/modules.ini	/^format-muted-padding = 2$/;"	k	section:module/pulseaudio
+padding	grayblocks/modules.ini	/^format-offline-padding = 2$/;"	k	section:module/mpd
+padding	grayblocks/modules.ini	/^format-online-padding = 2$/;"	k	section:module/mpd
+padding	grayblocks/modules.ini	/^format-padding = 1$/;"	k	section:module/workspaces
+padding	grayblocks/modules.ini	/^format-padding = 2$/;"	k	section:module/backlight
+padding	grayblocks/modules.ini	/^format-padding = 2$/;"	k	section:module/cpu
+padding	grayblocks/modules.ini	/^format-padding = 2$/;"	k	section:module/date
+padding	grayblocks/modules.ini	/^format-padding = 2$/;"	k	section:module/keyboard
+padding	grayblocks/modules.ini	/^format-padding = 2$/;"	k	section:module/memory
+padding	grayblocks/modules.ini	/^format-padding = 2$/;"	k	section:module/temperature
+padding	grayblocks/modules.ini	/^format-padding = 2$/;"	k	section:module/title
+padding	grayblocks/modules.ini	/^format-unmounted-padding = 2$/;"	k	section:module/filesystem
+padding	grayblocks/modules.ini	/^format-volume-padding = 2$/;"	k	section:module/alsa
+padding	grayblocks/modules.ini	/^format-volume-padding = 2$/;"	k	section:module/pulseaudio
+padding	grayblocks/modules.ini	/^format-warn-padding = 2$/;"	k	section:module/temperature
+padding	grayblocks/modules.ini	/^label-active-padding = 1$/;"	k	section:module/workspaces
+padding	grayblocks/modules.ini	/^label-empty-padding = 1$/;"	k	section:module/workspaces
+padding	grayblocks/modules.ini	/^label-occupied-padding = 1$/;"	k	section:module/workspaces
+padding	grayblocks/modules.ini	/^label-urgent-padding = 1$/;"	k	section:module/workspaces
+padding	grayblocks/preview.ini	/^padding = 0$/;"	k	section:bar/main
+padding	grayblocks/preview.ini	/^tray-padding = 0$/;"	k	section:bar/bottom
+padding	grayblocks/user_modules.ini	/^content-padding = 1$/;"	k	section:module/apps
+padding	grayblocks/user_modules.ini	/^content-padding = 2$/;"	k	section:module/color-switch
+padding	grayblocks/user_modules.ini	/^content-padding = 4$/;"	k	section:module/launcher
+padding	grayblocks/user_modules.ini	/^content-padding = 4$/;"	k	section:module/sysmenu
+padding	grayblocks/user_modules.ini	/^format-padding = 2$/;"	k	section:module/menu
+padding	grayblocks/user_modules.ini	/^format-padding = 2$/;"	k	section:module/powermenu
+padding	grayblocks/user_modules.ini	/^format-padding = 2$/;"	k	section:module/updates
+path	grayblocks/modules.ini	/^hwmon-path = \/sys\/devices\/pci0000:00\/0000:00:01.3\/0000:01:00.0\/hwmon\/hwmon0\/temp1_input$/;"	k	section:module/temperature
 pattern	drw.h	/^	FcPattern *pattern;$/;"	m	struct:Fnt	typeref:typename:FcPattern *
+pause	grayblocks/bars.ini	/^icon-pause = $/;"	k	section:module/mpd_bar
+pause	grayblocks/modules.ini	/^icon-pause = $/;"	k	section:module/mpd
+plain	grayblocks/scripts/checkupdates	/^plain() {$/;"	f
+play	grayblocks/bars.ini	/^icon-play = $/;"	k	section:module/mpd_bar
+play	grayblocks/modules.ini	/^icon-play = $/;"	k	section:module/mpd
 pop	dwm.c	/^pop(Client *c)$/;"	f	typeref:typename:void
+position	grayblocks/config.ini	/^tray-position = none$/;"	k	section:bar/main
+position	grayblocks/preview.ini	/^tray-position = none$/;"	k	section:bar/bottom
+prefix	grayblocks/bars.ini	/^format-charging-prefix = " "$/;"	k	section:module/battery_bar
+prefix	grayblocks/bars.ini	/^format-discharging-prefix = " " $/;"	k	section:module/battery_bar
+prefix	grayblocks/bars.ini	/^format-full-prefix = " "$/;"	k	section:module/battery_bar
+prefix	grayblocks/bars.ini	/^format-mounted-prefix = " "$/;"	k	section:module/filesystem_bar
+prefix	grayblocks/bars.ini	/^format-muted-prefix = $/;"	k	section:module/volume
+prefix	grayblocks/bars.ini	/^format-offline-prefix = $/;"	k	section:module/mpd_bar
+prefix	grayblocks/bars.ini	/^format-online-prefix = $/;"	k	section:module/mpd_bar
+prefix	grayblocks/bars.ini	/^format-prefix = " "$/;"	k	section:module/cpu_bar
+prefix	grayblocks/bars.ini	/^format-prefix = " "$/;"	k	section:module/memory_bar
+prefix	grayblocks/bars.ini	/^format-unmounted-prefix = " "$/;"	k	section:module/filesystem_bar
+prefix	grayblocks/modules.ini	/^format-charging-prefix = " "$/;"	k	section:module/battery
+prefix	grayblocks/modules.ini	/^format-connected-prefix = $/;"	k	section:module/network
+prefix	grayblocks/modules.ini	/^format-discharging-prefix = " "$/;"	k	section:module/battery
+prefix	grayblocks/modules.ini	/^format-disconnected-prefix = $/;"	k	section:module/network
+prefix	grayblocks/modules.ini	/^format-full-prefix = " "$/;"	k	section:module/battery
+prefix	grayblocks/modules.ini	/^format-mounted-prefix = $/;"	k	section:module/filesystem
+prefix	grayblocks/modules.ini	/^format-muted-prefix = $/;"	k	section:module/alsa
+prefix	grayblocks/modules.ini	/^format-muted-prefix = $/;"	k	section:module/pulseaudio
+prefix	grayblocks/modules.ini	/^format-offline-prefix = $/;"	k	section:module/mpd
+prefix	grayblocks/modules.ini	/^format-online-prefix = $/;"	k	section:module/mpd
+prefix	grayblocks/modules.ini	/^format-prefix = $/;"	k	section:module/cpu
+prefix	grayblocks/modules.ini	/^format-prefix = $/;"	k	section:module/keyboard
+prefix	grayblocks/modules.ini	/^format-prefix = $/;"	k	section:module/memory
+prefix	grayblocks/modules.ini	/^format-unmounted-prefix = $/;"	k	section:module/filesystem
+prefix	grayblocks/user_modules.ini	/^format-prefix = $/;"	k	section:module/updates
+prev	grayblocks/bars.ini	/^icon-prev = $/;"	k	section:module/mpd_bar
+prev	grayblocks/modules.ini	/^icon-prev = $/;"	k	section:module/mpd
+primary	grayblocks/colors.ini	/^primary = #5D7B94$/;"	k	section:color
 propertynotify	dwm.c	/^propertynotify(XEvent *e)$/;"	f	typeref:typename:void
+pywal_get	grayblocks/scripts/pywal.sh	/^pywal_get() {$/;"	f
 quit	dwm.c	/^quit(const Arg *arg)$/;"	f	typeref:typename:void
+random	grayblocks/bars.ini	/^icon-random = $/;"	k	section:module/mpd_bar
+random	grayblocks/modules.ini	/^icon-random = $/;"	k	section:module/mpd
 recttomon	dwm.c	/^recttomon(int x, int y, int w, int h)$/;"	f	typeref:typename:Monitor *
+red	grayblocks/colors.ini	/^red = #B71C1C$/;"	k	section:color
+redirect	grayblocks/config.ini	/^override-redirect = false$/;"	k	section:bar/main
+redirect	grayblocks/preview.ini	/^override-redirect = false$/;"	k	section:bar/main
+reload	grayblocks/config.ini	/^screenchange-reload = false$/;"	k	section:settings
+reload	grayblocks/preview.ini	/^screenchange-reload = false$/;"	k	section:settings
+repeat	grayblocks/bars.ini	/^icon-repeat = $/;"	k	section:module/mpd_bar
+repeat	grayblocks/modules.ini	/^icon-repeat = $/;"	k	section:module/mpd
+repeatone	grayblocks/bars.ini	/^icon-repeatone = $/;"	k	section:module/mpd_bar
+repeatone	grayblocks/modules.ini	/^icon-repeatone = $/;"	k	section:module/mpd
 resize	dwm.c	/^resize(Client *c, int x, int y, int w, int h, int interact)$/;"	f	typeref:typename:void
 resizeclient	dwm.c	/^resizeclient(Client *c, int x, int y, int w, int h)$/;"	f	typeref:typename:void
 resizehints	config.def.h	/^static const int resizehints = 1;    \/* 1 means respect size hints in tiled resizals *\/$/;"	v	typeref:typename:const int
 resizehints	config.h	/^static const int resizehints = 1;    \/* 1 means respect size hints in tiled resizals *\/$/;"	v	typeref:typename:const int
 resizemouse	dwm.c	/^resizemouse(const Arg *arg)$/;"	f	typeref:typename:void
 restack	dwm.c	/^restack(Monitor *m)$/;"	f	typeref:typename:void
+right	grayblocks/config.ini	/^click-right =$/;"	k	section:bar/main
+right	grayblocks/config.ini	/^double-click-right =$/;"	k	section:bar/main
+right	grayblocks/config.ini	/^module-margin-right = 0$/;"	k	section:bar/main
+right	grayblocks/config.ini	/^modules-right = color-switch sep network sep date sysmenu$/;"	k	section:bar/main
+right	grayblocks/preview.ini	/^click-right =$/;"	k	section:bar/bottom
+right	grayblocks/preview.ini	/^double-click-right =$/;"	k	section:bar/bottom
+right	grayblocks/preview.ini	/^module-margin-right = 0$/;"	k	section:bar/main
+right	grayblocks/preview.ini	/^modules-right = alsa sep battery sep network sep date sep sysmenu$/;"	k	section:bar/top
+right	grayblocks/preview.ini	/^modules-right = color-switch sep keyboard sep pulseaudio sep backlight sep updates sep powermenu/;"	k	section:bar/bottom
+right	grayblocks/user_modules.ini	/^click-right = chromium &$/;"	k	section:module/browser
+right	grayblocks/user_modules.ini	/^click-right = exo-open --launch TerminalEmulator &$/;"	k	section:module/updates
+right	grayblocks/user_modules.ini	/^click-right = lxappearance &$/;"	k	section:module/settings
+right	grayblocks/user_modules.ini	/^click-right = pcmanfm &$/;"	k	section:module/files
+right	grayblocks/user_modules.ini	/^click-right = xfce4-terminal &$/;"	k	section:module/term
+right	grayblocks/user_modules.ini	/^click-right = ~\/.config\/polybar\/grayblocks\/scripts\/color-switch.sh &$/;"	k	section:module/launcher
+right	grayblocks/user_modules.ini	/^expand-right = true$/;"	k	section:module/menu
+right	grayblocks/user_modules.ini	/^expand-right = true$/;"	k	section:module/powermenu
 root	drw.h	/^	Window root;$/;"	m	struct:__anon0f5116480308	typeref:typename:Window
 root	dwm.c	/^static Window root, wmcheckwin;$/;"	v	typeref:typename:Window	file:
 rules	config.def.h	/^static const Rule rules[] = {$/;"	v	typeref:typename:const Rule[]
@@ -518,17 +1202,30 @@ rules	config.h	/^static const Rule rules[] = {$/;"	v	typeref:typename:const Rule
 run	dwm.c	/^run(void)$/;"	f	typeref:typename:void
 runautostart	dwm.c	/^runautostart(void)$/;"	f	typeref:typename:void
 running	dwm.c	/^static int running = 1;$/;"	v	typeref:typename:int	file:
+scale	grayblocks/config.ini	/^tray-scale = 1.0$/;"	k	section:bar/main
+scale	grayblocks/preview.ini	/^tray-scale = 1.0$/;"	k	section:bar/bottom
 scan	dwm.c	/^scan(void)$/;"	f	typeref:typename:void
 scheme	drw.h	/^	Clr *scheme;$/;"	m	struct:__anon0f5116480308	typeref:typename:Clr *
 scheme	dwm.c	/^static Clr **scheme;$/;"	v	typeref:typename:Clr **	file:
 screen	drw.h	/^	int screen;$/;"	m	struct:__anon0f5116480308	typeref:typename:int
 screen	dwm.c	/^static int screen;$/;"	v	typeref:typename:int	file:
+scroll	grayblocks/config.ini	/^cursor-scroll = $/;"	k	section:bar/main
+scroll	grayblocks/modules.ini	/^enable-scroll = true$/;"	k	section:module/workspaces
+scroll	grayblocks/preview.ini	/^cursor-scroll = $/;"	k	section:bar/bottom
+seekb	grayblocks/bars.ini	/^icon-seekb = $/;"	k	section:module/mpd_bar
+seekb	grayblocks/modules.ini	/^icon-seekb = $/;"	k	section:module/mpd
+seekf	grayblocks/bars.ini	/^icon-seekf = $/;"	k	section:module/mpd_bar
+seekf	grayblocks/modules.ini	/^icon-seekf = $/;"	k	section:module/mpd
 sel	dwm.c	/^	Client *sel;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
 sellt	dwm.c	/^	unsigned int sellt;$/;"	m	struct:Monitor	typeref:typename:unsigned int	file:
 selmon	dwm.c	/^static Monitor *mons, *selmon;$/;"	v	typeref:typename:Monitor *	file:
 seltags	dwm.c	/^	unsigned int seltags;$/;"	m	struct:Monitor	typeref:typename:unsigned int	file:
 sendevent	dwm.c	/^sendevent(Client *c, Atom proto)$/;"	f	typeref:typename:int
 sendmon	dwm.c	/^sendmon(Client *c, Monitor *m)$/;"	f	typeref:typename:void
+separator	grayblocks/config.ini	/^separator =$/;"	k	section:bar/main
+separator	grayblocks/preview.ini	/^separator =$/;"	k	section:bar/bottom
+separator	grayblocks/user_modules.ini	/^label-separator = " | "$/;"	k	section:module/menu
+separator	grayblocks/user_modules.ini	/^label-separator = " | "$/;"	k	section:module/powermenu
 setcfact	dwm.c	/^setcfact(const Arg *arg) {$/;"	f	typeref:typename:void
 setclientstate	dwm.c	/^setclientstate(Client *c, long state)$/;"	f	typeref:typename:void
 setcurrentdesktop	dwm.c	/^setcurrentdesktop(void){$/;"	f	typeref:typename:void
@@ -539,6 +1236,8 @@ setgaps	vanitygaps.c	/^setgaps(int oh, int ov, int ih, int iv)$/;"	f	typeref:typ
 setlayout	dwm.c	/^setlayout(const Arg *arg)$/;"	f	typeref:typename:void
 setmfact	dwm.c	/^setmfact(const Arg *arg)$/;"	f	typeref:typename:void
 setnumdesktops	dwm.c	/^setnumdesktops(void){$/;"	f	typeref:typename:void
+settings	grayblocks/config.ini	/^[settings]$/;"	s
+settings	grayblocks/preview.ini	/^[settings]$/;"	s
 setup	dwm.c	/^setup(void)$/;"	f	typeref:typename:void
 seturgent	dwm.c	/^seturgent(Client *c, int urg)$/;"	f	typeref:typename:void
 setviewport	dwm.c	/^setviewport(void){$/;"	f	typeref:typename:void
@@ -547,16 +1246,38 @@ showbar	config.def.h	/^static const int showbar            = 0;        \/* 0 mea
 showbar	config.h	/^static const int showbar            = 0;        \/* 0 means no bar *\/$/;"	v	typeref:typename:const int
 showbar	dwm.c	/^	int showbar;$/;"	m	struct:Monitor	typeref:typename:int	file:
 showhide	dwm.c	/^showhide(Client *c)$/;"	f	typeref:typename:void
+single	grayblocks/bars.ini	/^icon-single = $/;"	k	section:module/mpd_bar
+single	grayblocks/modules.ini	/^icon-single = $/;"	k	section:module/mpd
+sink	grayblocks/modules.ini	/^sink = alsa_output.pci-0000_03_00.6.analog-stereo$/;"	k	section:module/pulseaudio
+size	grayblocks/config.ini	/^border-top-size = 4$/;"	k	section:bar/main
+size	grayblocks/config.ini	/^line-size = 6$/;"	k	section:bar/main
+size	grayblocks/preview.ini	/^border-top-size = 4$/;"	k	section:bar/main
+size	grayblocks/preview.ini	/^line-size = 6$/;"	k	section:bar/main
 smartgaps	config.def.h	/^static       int smartgaps          = 0;        \/* 1 means no outer gap when there is only one /;"	v	typeref:typename:int
 smartgaps	config.h	/^static       int smartgaps          = 0;        \/* 1 means no outer gap when there is only one /;"	v	typeref:typename:int
 snap	config.def.h	/^static const unsigned int snap      = 32;       \/* snap pixel *\/$/;"	v	typeref:typename:const unsigned int
 snap	config.h	/^static const unsigned int snap      = 32;       \/* snap pixel *\/$/;"	v	typeref:typename:const unsigned int
 snext	dwm.c	/^	Client *snext;$/;"	m	struct:Client	typeref:typename:Client *	file:
+song	grayblocks/bars.ini	/^label-song =  " %artist% - %title%"$/;"	k	section:module/mpd_bar
+song	grayblocks/modules.ini	/^label-song =  " %artist% - %title%"$/;"	k	section:module/mpd
+soundcard	grayblocks/bars.ini	/^headphone-soundcard = default$/;"	k	section:module/volume
+soundcard	grayblocks/bars.ini	/^master-soundcard = default$/;"	k	section:module/volume
+soundcard	grayblocks/bars.ini	/^speaker-soundcard = default$/;"	k	section:module/volume
+soundcard	grayblocks/modules.ini	/^headphone-soundcard = default$/;"	k	section:module/alsa
+soundcard	grayblocks/modules.ini	/^master-soundcard = default$/;"	k	section:module/alsa
+soundcard	grayblocks/modules.ini	/^speaker-soundcard = default$/;"	k	section:module/alsa
 spawn	dwm.c	/^spawn(const Arg *arg)$/;"	f	typeref:typename:void
 spawnbar	dwm.c	/^spawnbar()$/;"	f	typeref:typename:void
 spiral	vanitygaps.c	/^spiral(Monitor *m)$/;"	f	typeref:typename:void
+srcshotcmd	config.def.h	/^static const char *srcshotcmd[] = { "bash", "\/home\/abu\/.config\/rofi\/applets\/bin\/screensho/;"	v	typeref:typename:const char * []
+srcshotcmd	config.h	/^static const char *srcshotcmd[] = { "bash", "\/home\/abu\/.config\/rofi\/applets\/bin\/screensho/;"	v	typeref:typename:const char * []
 stack	dwm.c	/^	Client *stack;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
+stats	grayblocks/modules.ini	/^accumulate-stats = true$/;"	k	section:module/network
 stext	dwm.c	/^static char stext[256];$/;"	v	typeref:typename:char[256]	file:
+stop	grayblocks/bars.ini	/^icon-stop = $/;"	k	section:module/mpd_bar
+stop	grayblocks/modules.ini	/^icon-stop = $/;"	k	section:module/mpd
+strict	grayblocks/config.ini	/^monitor-strict = false$/;"	k	section:bar/main
+strict	grayblocks/preview.ini	/^monitor-strict = false$/;"	k	section:bar/main
 sw	dwm.c	/^static int sw, sh;           \/* X display screen geometry width, height *\/$/;"	v	typeref:typename:int	file:
 symbol	dwm.c	/^	const char *symbol;$/;"	m	struct:__anon0f53a99e0908	typeref:typename:const char *	file:
 tag	dwm.c	/^tag(const Arg *arg)$/;"	f	typeref:typename:void
@@ -566,24 +1287,112 @@ tags	config.h	/^static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7",
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:Client	typeref:typename:unsigned int	file:
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:unsigned int	file:
 tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:unsigned int[2]	file:
+tail	grayblocks/user_modules.ini	/^tail = true$/;"	k	section:module/updates
+temperature	grayblocks/modules.ini	/^warn-temperature = 65$/;"	k	section:module/temperature
 termcmd	config.def.h	/^static const char *termcmd[]  = { "st", NULL };$/;"	v	typeref:typename:const char * []
 termcmd	config.h	/^static const char *termcmd[]  = { "st", NULL };$/;"	v	typeref:typename:const char * []
 tile	vanitygaps.c	/^tile(Monitor *m)$/;"	f	typeref:typename:void	file:
+time	grayblocks/bars.ini	/^label-time = %elapsed% \/ %total%$/;"	k	section:module/mpd_bar
+time	grayblocks/modules.ini	/^label-time = %elapsed% \/ %total%$/;"	k	section:module/mpd
+time	grayblocks/modules.ini	/^time = " %I:%M %p"$/;"	k	section:module/date
 title	dwm.c	/^	const char *title;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:const char *	file:
 togglebar	dwm.c	/^togglebar(const Arg *arg)$/;"	f	typeref:typename:void
 togglefloating	dwm.c	/^togglefloating(const Arg *arg)$/;"	f	typeref:typename:void
 togglegaps	vanitygaps.c	/^togglegaps(const Arg *arg)$/;"	f	typeref:typename:void
 toggletag	dwm.c	/^toggletag(const Arg *arg)$/;"	f	typeref:typename:void
 toggleview	dwm.c	/^toggleview(const Arg *arg)$/;"	f	typeref:typename:void
+top	grayblocks/config.ini	/^margin-top = 0$/;"	k	section:global/wm
+top	grayblocks/config.ini	/^radius-top = 0.0$/;"	k	section:bar/main
+top	grayblocks/preview.ini	/^margin-top = 0$/;"	k	section:global/wm
+top	grayblocks/preview.ini	/^radius-top = 0.0$/;"	k	section:bar/main
 topbar	config.def.h	/^static const int topbar             = 1;        \/* 0 means bottom bar *\/$/;"	v	typeref:typename:const int
 topbar	config.h	/^static const int topbar             = 1;        \/* 0 means bottom bar *\/$/;"	v	typeref:typename:const int
 topbar	dwm.c	/^	int topbar;$/;"	m	struct:Monitor	typeref:typename:int	file:
+transparency	grayblocks/config.ini	/^pseudo-transparency = false$/;"	k	section:settings
+transparency	grayblocks/preview.ini	/^pseudo-transparency = false$/;"	k	section:settings
+type	grayblocks/bars.ini	/^type = internal\/alsa$/;"	k	section:module/volume
+type	grayblocks/bars.ini	/^type = internal\/backlight$/;"	k	section:module/brightness
+type	grayblocks/bars.ini	/^type = internal\/battery$/;"	k	section:module/battery_bar
+type	grayblocks/bars.ini	/^type = internal\/cpu$/;"	k	section:module/cpu_bar
+type	grayblocks/bars.ini	/^type = internal\/fs$/;"	k	section:module/filesystem_bar
+type	grayblocks/bars.ini	/^type = internal\/memory$/;"	k	section:module/memory_bar
+type	grayblocks/bars.ini	/^type = internal\/mpd$/;"	k	section:module/mpd_bar
+type	grayblocks/modules.ini	/^type = internal\/alsa$/;"	k	section:module/alsa
+type	grayblocks/modules.ini	/^type = internal\/backlight$/;"	k	section:module/backlight
+type	grayblocks/modules.ini	/^type = internal\/battery$/;"	k	section:module/battery
+type	grayblocks/modules.ini	/^type = internal\/cpu$/;"	k	section:module/cpu
+type	grayblocks/modules.ini	/^type = internal\/date$/;"	k	section:module/date
+type	grayblocks/modules.ini	/^type = internal\/fs$/;"	k	section:module/filesystem
+type	grayblocks/modules.ini	/^type = internal\/memory$/;"	k	section:module/memory
+type	grayblocks/modules.ini	/^type = internal\/mpd$/;"	k	section:module/mpd
+type	grayblocks/modules.ini	/^type = internal\/network$/;"	k	section:module/network
+type	grayblocks/modules.ini	/^type = internal\/network$/;"	k	section:module/wired-network
+type	grayblocks/modules.ini	/^type = internal\/network$/;"	k	section:module/wireless-network
+type	grayblocks/modules.ini	/^type = internal\/pulseaudio$/;"	k	section:module/pulseaudio
+type	grayblocks/modules.ini	/^type = internal\/temperature$/;"	k	section:module/temperature
+type	grayblocks/modules.ini	/^type = internal\/xkeyboard$/;"	k	section:module/keyboard
+type	grayblocks/modules.ini	/^type = internal\/xwindow$/;"	k	section:module/title
+type	grayblocks/modules.ini	/^type = internal\/xworkspaces$/;"	k	section:module/workspaces
+type	grayblocks/user_modules.ini	/^type = custom\/menu$/;"	k	section:module/menu
+type	grayblocks/user_modules.ini	/^type = custom\/menu$/;"	k	section:module/powermenu
+type	grayblocks/user_modules.ini	/^type = custom\/script$/;"	k	section:module/updates
+type	grayblocks/user_modules.ini	/^type = custom\/text$/;"	k	section:module/apps
+type	grayblocks/user_modules.ini	/^type = custom\/text$/;"	k	section:module/color-switch
+type	grayblocks/user_modules.ini	/^type = custom\/text$/;"	k	section:module/launcher
+type	grayblocks/user_modules.ini	/^type = custom\/text$/;"	k	section:module/sep
+type	grayblocks/user_modules.ini	/^type = custom\/text$/;"	k	section:module/sysmenu
 ui	dwm.c	/^	unsigned int ui;$/;"	m	union:__anon0f53a99e060a	typeref:typename:unsigned int	file:
+underline	grayblocks/bars.ini	/^format-charging-underline = ${color.background}$/;"	k	section:module/battery_bar
+underline	grayblocks/bars.ini	/^format-discharging-underline = ${color.background}$/;"	k	section:module/battery_bar
+underline	grayblocks/bars.ini	/^format-full-underline = ${color.background}$/;"	k	section:module/battery_bar
+underline	grayblocks/bars.ini	/^format-mounted-underline = ${color.background}$/;"	k	section:module/filesystem_bar
+underline	grayblocks/bars.ini	/^format-muted-underline = ${color.background}$/;"	k	section:module/volume
+underline	grayblocks/bars.ini	/^format-offline-underline = ${color.background}$/;"	k	section:module/mpd_bar
+underline	grayblocks/bars.ini	/^format-online-underline = ${color.background}$/;"	k	section:module/mpd_bar
+underline	grayblocks/bars.ini	/^format-underline = ${color.background}$/;"	k	section:module/brightness
+underline	grayblocks/bars.ini	/^format-underline = ${color.background}$/;"	k	section:module/cpu_bar
+underline	grayblocks/bars.ini	/^format-underline = ${color.background}$/;"	k	section:module/memory_bar
+underline	grayblocks/bars.ini	/^format-unmounted-underline = ${color.background}$/;"	k	section:module/filesystem_bar
+underline	grayblocks/bars.ini	/^format-volume-underline = ${color.background}$/;"	k	section:module/volume
+underline	grayblocks/config.ini	/^compositing-underline = over$/;"	k	section:settings
+underline	grayblocks/modules.ini	/^format-charging-underline = ${color.background}$/;"	k	section:module/battery
+underline	grayblocks/modules.ini	/^format-connected-underline = ${color.background}$/;"	k	section:module/network
+underline	grayblocks/modules.ini	/^format-discharging-underline = ${color.background}$/;"	k	section:module/battery
+underline	grayblocks/modules.ini	/^format-disconnected-underline = ${color.background}$/;"	k	section:module/network
+underline	grayblocks/modules.ini	/^format-full-underline = ${color.background}$/;"	k	section:module/battery
+underline	grayblocks/modules.ini	/^format-mounted-underline = ${color.background}$/;"	k	section:module/filesystem
+underline	grayblocks/modules.ini	/^format-muted-underline = ${color.background}$/;"	k	section:module/alsa
+underline	grayblocks/modules.ini	/^format-muted-underline = ${color.background}$/;"	k	section:module/pulseaudio
+underline	grayblocks/modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/backlight
+underline	grayblocks/modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/cpu
+underline	grayblocks/modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/date
+underline	grayblocks/modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/keyboard
+underline	grayblocks/modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/memory
+underline	grayblocks/modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/temperature
+underline	grayblocks/modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/workspaces
+underline	grayblocks/modules.ini	/^format-unmounted-underline = ${color.background}$/;"	k	section:module/filesystem
+underline	grayblocks/modules.ini	/^format-volume-underline = ${color.background}$/;"	k	section:module/alsa
+underline	grayblocks/modules.ini	/^format-volume-underline = ${color.background}$/;"	k	section:module/pulseaudio
+underline	grayblocks/modules.ini	/^format-warn-underline = ${color.background}$/;"	k	section:module/temperature
+underline	grayblocks/preview.ini	/^compositing-underline = over$/;"	k	section:settings
+underline	grayblocks/user_modules.ini	/^content-underline = ${color.background}$/;"	k	section:module/apps
+underline	grayblocks/user_modules.ini	/^content-underline = ${color.background}$/;"	k	section:module/color-switch
+underline	grayblocks/user_modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/menu
+underline	grayblocks/user_modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/powermenu
+underline	grayblocks/user_modules.ini	/^format-underline = ${color.background}$/;"	k	section:module/updates
 unfocus	dwm.c	/^unfocus(Client *c, int setfocus)$/;"	f	typeref:typename:void
 uninstall	Makefile	/^uninstall:$/;"	t
+units	grayblocks/modules.ini	/^units = true$/;"	k	section:module/temperature
 unmanage	dwm.c	/^unmanage(Client *c, int destroyed)$/;"	f	typeref:typename:void
 unmanagealtbar	dwm.c	/^unmanagealtbar(Window w)$/;"	f	typeref:typename:void
 unmapnotify	dwm.c	/^unmapnotify(XEvent *e)$/;"	f	typeref:typename:void
+unmounted	grayblocks/bars.ini	/^format-unmounted = <label-unmounted>$/;"	k	section:module/filesystem_bar
+unmounted	grayblocks/bars.ini	/^label-unmounted = "%mountpoint%: not mounted"$/;"	k	section:module/filesystem_bar
+unmounted	grayblocks/modules.ini	/^format-unmounted = <label-unmounted>$/;"	k	section:module/filesystem
+unmounted	grayblocks/modules.ini	/^label-unmounted = " %mountpoint%: not mounted"$/;"	k	section:module/filesystem
+up	grayblocks/config.ini	/^scroll-up =$/;"	k	section:bar/main
+up	grayblocks/modules.ini	/^unknown-as-up = true$/;"	k	section:module/network
+up	grayblocks/preview.ini	/^scroll-up =$/;"	k	section:bar/bottom
 updatebarpos	dwm.c	/^updatebarpos(Monitor *m)$/;"	f	typeref:typename:void
 updatebars	dwm.c	/^updatebars(void)$/;"	f	typeref:typename:void
 updateclientlist	dwm.c	/^updateclientlist()$/;"	f	typeref:typename:void
@@ -595,6 +1404,7 @@ updatestatus	dwm.c	/^updatestatus(void)$/;"	f	typeref:typename:void
 updatetitle	dwm.c	/^updatetitle(Client *c)$/;"	f	typeref:typename:void
 updatewindowtype	dwm.c	/^updatewindowtype(Client *c)$/;"	f	typeref:typename:void
 updatewmhints	dwm.c	/^updatewmhints(Client *c)$/;"	f	typeref:typename:void
+urgent	grayblocks/modules.ini	/^label-urgent = %icon%$/;"	k	section:module/workspaces
 usealtbar	config.def.h	/^static const int usealtbar          = 1;        \/* 1 means use non-dwm status bar *\/$/;"	v	typeref:typename:const int
 usealtbar	config.h	/^static const int usealtbar          = 1;        \/* 1 means use non-dwm status bar *\/$/;"	v	typeref:typename:const int
 utf8decode	drw.c	/^utf8decode(const char *c, long *u, size_t clen)$/;"	f	typeref:typename:size_t	file:
@@ -605,20 +1415,47 @@ utfmask	drw.c	/^static const unsigned char utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0
 utfmax	drw.c	/^static const long utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};$/;"	v	typeref:typename:const long[]	file:
 utfmin	drw.c	/^static const long utfmin[UTF_SIZ + 1] = {       0,    0,  0x80,  0x800,  0x10000};$/;"	v	typeref:typename:const long[]	file:
 v	dwm.c	/^	const void *v;$/;"	m	union:__anon0f53a99e060a	typeref:typename:const void *	file:
+value	grayblocks/config.ini	/^dim-value = 1.0$/;"	k	section:bar/main
+value	grayblocks/preview.ini	/^dim-value = 1.0$/;"	k	section:bar/bottom
+values	grayblocks/bars.ini	/^fixed-values = false$/;"	k	section:module/filesystem_bar
+values	grayblocks/modules.ini	/^fixed-values = true$/;"	k	section:module/filesystem
 view	dwm.c	/^view(const Arg *arg)$/;"	f	typeref:typename:void
+volume	grayblocks/bars.ini	/^format-volume = <ramp-volume> <bar-volume>$/;"	k	section:module/volume
+volume	grayblocks/bars.ini	/^label-volume = %percentage%%$/;"	k	section:module/volume
+volume	grayblocks/modules.ini	/^format-volume = <ramp-volume> <label-volume>$/;"	k	section:module/alsa
+volume	grayblocks/modules.ini	/^format-volume = <ramp-volume> <label-volume>$/;"	k	section:module/pulseaudio
+volume	grayblocks/modules.ini	/^label-volume = %percentage%%$/;"	k	section:module/alsa
+volume	grayblocks/modules.ini	/^label-volume = %percentage%%$/;"	k	section:module/pulseaudio
 w	drw.h	/^	unsigned int w, h;$/;"	m	struct:__anon0f5116480308	typeref:typename:unsigned int
 w	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
+warn	grayblocks/modules.ini	/^format-warn = <ramp> <label-warn>$/;"	k	section:module/temperature
+warn	grayblocks/modules.ini	/^label-warn = "%temperature-c%"$/;"	k	section:module/temperature
+warning	grayblocks/scripts/checkupdates	/^warning() {$/;"	f
 wh	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
+width	grayblocks/bars.ini	/^bar-capacity-width = 10$/;"	k	section:module/battery_bar
+width	grayblocks/bars.ini	/^bar-load-width = 10$/;"	k	section:module/cpu_bar
+width	grayblocks/bars.ini	/^bar-progress-width = 10$/;"	k	section:module/mpd_bar
+width	grayblocks/bars.ini	/^bar-used-width = 10$/;"	k	section:module/filesystem_bar
+width	grayblocks/bars.ini	/^bar-used-width = 10$/;"	k	section:module/memory_bar
+width	grayblocks/bars.ini	/^bar-volume-width = 10$/;"	k	section:module/volume
+width	grayblocks/bars.ini	/^bar-width = 10$/;"	k	section:module/brightness
+width	grayblocks/config.ini	/^width = 100%$/;"	k	section:bar/main
+width	grayblocks/preview.ini	/^width = 100%$/;"	k	section:bar/main
 win	dwm.c	/^	Window win;$/;"	m	struct:Client	typeref:typename:Window	file:
 wintoclient	dwm.c	/^wintoclient(Window w)$/;"	f	typeref:typename:Client *
 wintomon	dwm.c	/^wintomon(Window w)$/;"	f	typeref:typename:Monitor *
 wmatom	dwm.c	/^static Atom wmatom[WMLast], netatom[NetLast];$/;"	v	typeref:typename:Atom[]	file:
 wmcheckwin	dwm.c	/^static Window root, wmcheckwin;$/;"	v	typeref:typename:Window	file:
 wmclasscontains	dwm.c	/^wmclasscontains(Window win, const char *class, const char *name)$/;"	f	typeref:typename:int
+workspaces	grayblocks/modules.ini	/^pin-workspaces = true$/;"	k	section:module/workspaces
 ww	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 wx	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 wy	dwm.c	/^	int wx, wy, ww, wh;   \/* window area  *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 x	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
+x	grayblocks/config.ini	/^offset-x = 0%$/;"	k	section:bar/main
+x	grayblocks/config.ini	/^tray-offset-x = 0$/;"	k	section:bar/main
+x	grayblocks/preview.ini	/^offset-x = 0%$/;"	k	section:bar/main
+x	grayblocks/preview.ini	/^tray-offset-x = 0$/;"	k	section:bar/bottom
 xerror	dwm.c	/^xerror(Display *dpy, XErrorEvent *ee)$/;"	f	typeref:typename:int
 xerrordummy	dwm.c	/^xerrordummy(Display *dpy, XErrorEvent *ee)$/;"	f	typeref:typename:int
 xerrorstart	dwm.c	/^xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	f	typeref:typename:int
@@ -627,4 +1464,13 @@ xfont	drw.h	/^	XftFont *xfont;$/;"	m	struct:Fnt	typeref:typename:XftFont *
 xfont_create	drw.c	/^xfont_create(Drw *drw, const char *fontname, FcPattern *fontpattern)$/;"	f	typeref:typename:Fnt *	file:
 xfont_free	drw.c	/^xfont_free(Fnt *font)$/;"	f	typeref:typename:void	file:
 y	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
+y	grayblocks/config.ini	/^offset-y = 0%$/;"	k	section:bar/main
+y	grayblocks/config.ini	/^tray-offset-y = 0$/;"	k	section:bar/main
+y	grayblocks/preview.ini	/^offset-y = 0%$/;"	k	section:bar/main
+y	grayblocks/preview.ini	/^offset-y = 10$/;"	k	section:bar/bottom
+y	grayblocks/preview.ini	/^offset-y = 118$/;"	k	section:bar/top
+y	grayblocks/preview.ini	/^offset-y = 64$/;"	k	section:bar/mid
+y	grayblocks/preview.ini	/^tray-offset-y = 0$/;"	k	section:bar/bottom
+yellow	grayblocks/colors.ini	/^yellow = #F57F17$/;"	k	section:color
+zone	grayblocks/modules.ini	/^thermal-zone = 0$/;"	k	section:module/temperature
 zoom	dwm.c	/^zoom(const Arg *arg)$/;"	f	typeref:typename:void
