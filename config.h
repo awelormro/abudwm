@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+#include <X11/XF86keysym.h>
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -85,9 +85,13 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "bash", "/home/abu/.config/polybar/grayblocks/scripts/launcher.sh"};
 
 static const char *srcshotcmd[] = { "bash", "/home/abu/.config/rofi/applets/bin/screenshot.sh", NULL};
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[] = { "st", NULL };
 static const char *lockcmd[] = { "dm-tool", "lock", NULL};
-
+static const char *downvol[] = {"pactl", "set-sink-volume", "0", "-5%", NULL};
+static const char *upvol[] = {"pactl", "set-sink-volume", "0", "+5%", NULL};
+static const char *mutevol[] = { "ctl", "set-sink-mute", "0", "toggle",NULL}; 
+static const char *brightnessup[]={"brightnessctl", "set", "+5%"};
+static const char *brightnessdown[]={"brightnessctl", "set", "5%-"};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,7 +99,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
   { MODKEY,                       XK_u,      spawn,          {.v =srcshotcmd} },
   { MODKEY|ShiftMask,             XK_x,      spawn,          {.v =lockcmd} },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -106,6 +110,13 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
+  { MODKEY,                       XK_g,      spawn,          {.v = brightnessup} },
+  { MODKEY,                       XK_b,      spawn,          {.v = brightnessdown} },
+  { 0,             XF86XK_AudioLowerVolume,  spawn,          {.v = downvol} },
+  { 0,             XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol} },
+  { 0,             XF86XK_AudioMute,         spawn,          {.v = mutevol} },
+  { 0,             XF86XK_MonBrightnessUp,   spawn,          {.v = brightnessup} },
+  { 0,             XF86XK_MonBrightnessDown, spawn,          {.v = brightnessdown} },
 	/* { MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } }, */
 	/* { MODKEY|Mod4Mask|ShiftMask,    XK_u,      incrgaps,       {.i = -1 } }, */
 	/* { MODKEY|Mod4Mask,              XK_i,      incrigaps,      {.i = +1 } }, */

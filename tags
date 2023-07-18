@@ -474,6 +474,10 @@ bottom	grayblocks/preview.ini	/^bottom = true$/;"	k	section:bar/mid
 bottom	grayblocks/preview.ini	/^bottom = true$/;"	k	section:bar/top
 bottom	grayblocks/preview.ini	/^margin-bottom = 0$/;"	k	section:global/wm
 bottom	grayblocks/preview.ini	/^radius-bottom = 0.0$/;"	k	section:bar/main
+brightnessdown	config.def.h	/^static const char *brightnessdown[]={"brightnessctl", "set", "5%-"};$/;"	v	typeref:typename:const char * []
+brightnessdown	config.h	/^static const char *brightnessdown[]={"brightnessctl", "set", "5%-"};$/;"	v	typeref:typename:const char * []
+brightnessup	config.def.h	/^static const char *brightnessup[]={"brightnessctl", "set", "+5%"};$/;"	v	typeref:typename:const char * []
+brightnessup	config.h	/^static const char *brightnessup[]={"brightnessctl", "set", "+5%"};$/;"	v	typeref:typename:const char * []
 broken	dwm.c	/^static const char broken[] = "broken";$/;"	v	typeref:typename:const char[]	file:
 bstack	vanitygaps.c	/^bstack(Monitor *m)$/;"	f	typeref:typename:void	file:
 bstackhoriz	vanitygaps.c	/^bstackhoriz(Monitor *m)$/;"	f	typeref:typename:void	file:
@@ -578,6 +582,8 @@ dmenumon	config.def.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd
 dmenumon	config.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
 down	grayblocks/config.ini	/^scroll-down =$/;"	k	section:bar/main
 down	grayblocks/preview.ini	/^scroll-down =$/;"	k	section:bar/bottom
+downvol	config.def.h	/^static const char *downvol[] = {"pactl", "set-sink-volume", "0", "-5%", NULL};$/;"	v	typeref:typename:const char * []
+downvol	config.h	/^static const char *downvol[] = {"pactl", "set-sink-volume", "0", "-5%", NULL};$/;"	v	typeref:typename:const char * []
 dpy	drw.h	/^	Display *dpy;$/;"	m	struct:Fnt	typeref:typename:Display *
 dpy	drw.h	/^	Display *dpy;$/;"	m	struct:__anon0f5116480308	typeref:typename:Display *
 dpy	dwm.c	/^static Display *dpy;$/;"	v	typeref:typename:Display *	file:
@@ -900,6 +906,7 @@ locale	grayblocks/config.ini	/^locale = $/;"	k	section:bar/main
 locale	grayblocks/preview.ini	/^locale = $/;"	k	section:bar/bottom
 localshare	dwm.c	/^static const char localshare[] = ".local\/share";$/;"	v	typeref:typename:const char[]	file:
 lockcmd	config.def.h	/^static const char *lockcmd[] = { "dm-tool", "lock", NULL};$/;"	v	typeref:typename:const char * []
+lockcmd	config.h	/^static const char *lockcmd[] = { "dm-tool", "lock", NULL};$/;"	v	typeref:typename:const char * []
 lockfullscreen	config.def.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
 lockfullscreen	config.h	/^static const int lockfullscreen = 1; \/* 1 will force focus on the fullscreen window *\/$/;"	v	typeref:typename:const int
 lrpad	dwm.c	/^static int lrpad;            \/* sum of left and right padding for text *\/$/;"	v	typeref:typename:int	file:
@@ -993,6 +1000,8 @@ muted	grayblocks/modules.ini	/^format-muted = <label-muted>$/;"	k	section:module
 muted	grayblocks/modules.ini	/^format-muted = <label-muted>$/;"	k	section:module/pulseaudio
 muted	grayblocks/modules.ini	/^label-muted = " Muted"$/;"	k	section:module/alsa
 muted	grayblocks/modules.ini	/^label-muted = " Muted"$/;"	k	section:module/pulseaudio
+mutevol	config.def.h	/^static const char *mutevol[] = { "ctl", "set-sink-mute", "0", "toggle",NULL}; $/;"	v	typeref:typename:const char * []
+mutevol	config.h	/^static const char *mutevol[] = { "ctl", "set-sink-mute", "0", "toggle",NULL}; $/;"	v	typeref:typename:const char * []
 mw	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 mx	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
 my	dwm.c	/^	int mx, my, mw, mh;   \/* screen size *\/$/;"	m	struct:Monitor	typeref:typename:int	file:
@@ -1290,8 +1299,8 @@ tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:__anon0f53a99e0a08	typeref:typenam
 tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:unsigned int[2]	file:
 tail	grayblocks/user_modules.ini	/^tail = true$/;"	k	section:module/updates
 temperature	grayblocks/modules.ini	/^warn-temperature = 65$/;"	k	section:module/temperature
-termcmd	config.def.h	/^static const char *termcmd[]  = { "st", NULL };$/;"	v	typeref:typename:const char * []
-termcmd	config.h	/^static const char *termcmd[]  = { "st", NULL };$/;"	v	typeref:typename:const char * []
+termcmd	config.def.h	/^static const char *termcmd[] = { "st", NULL };$/;"	v	typeref:typename:const char * []
+termcmd	config.h	/^static const char *termcmd[] = { "st", NULL };$/;"	v	typeref:typename:const char * []
 tile	vanitygaps.c	/^tile(Monitor *m)$/;"	f	typeref:typename:void	file:
 time	grayblocks/bars.ini	/^label-time = %elapsed% \/ %total%$/;"	k	section:module/mpd_bar
 time	grayblocks/modules.ini	/^label-time = %elapsed% \/ %total%$/;"	k	section:module/mpd
@@ -1405,6 +1414,8 @@ updatestatus	dwm.c	/^updatestatus(void)$/;"	f	typeref:typename:void
 updatetitle	dwm.c	/^updatetitle(Client *c)$/;"	f	typeref:typename:void
 updatewindowtype	dwm.c	/^updatewindowtype(Client *c)$/;"	f	typeref:typename:void
 updatewmhints	dwm.c	/^updatewmhints(Client *c)$/;"	f	typeref:typename:void
+upvol	config.def.h	/^static const char *upvol[] = {"pactl", "set-sink-volume", "0", "+5%", NULL};$/;"	v	typeref:typename:const char * []
+upvol	config.h	/^static const char *upvol[] = {"pactl", "set-sink-volume", "0", "+5%", NULL};$/;"	v	typeref:typename:const char * []
 urgent	grayblocks/modules.ini	/^label-urgent = %icon%$/;"	k	section:module/workspaces
 usealtbar	config.def.h	/^static const int usealtbar          = 1;        \/* 1 means use non-dwm status bar *\/$/;"	v	typeref:typename:const int
 usealtbar	config.h	/^static const int usealtbar          = 1;        \/* 1 means use non-dwm status bar *\/$/;"	v	typeref:typename:const int
