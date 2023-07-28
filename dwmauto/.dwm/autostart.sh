@@ -7,5 +7,6 @@ xrdb -merge ~/.cache/wal/colors.Xresources &
 setxkbmap -layout us -variant intl &
 xset r rate 200 50
 picom &
-slstatus &
+# slstatus &
+dwmblocks &
 sleep 8 && wal -R

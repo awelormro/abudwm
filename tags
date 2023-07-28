@@ -1391,6 +1391,8 @@ title	dwm.c	/^	const char *title;$/;"	m	struct:__anon0f53a99e0a08	typeref:typena
 togglebar	dwm.c	/^togglebar(const Arg *arg)$/;"	f	typeref:typename:void
 togglefloating	dwm.c	/^togglefloating(const Arg *arg)$/;"	f	typeref:typename:void
 togglegaps	vanitygaps.c	/^togglegaps(const Arg *arg)$/;"	f	typeref:typename:void
+togglesistray	config.def.h	/^static const char *togglesistray[]={"bash", "\/home\/abu\/dotfiles\/traycollapse"};$/;"	v	typeref:typename:const char * []
+togglesistray	config.h	/^static const char *togglesistray[]={"bash", "~\/dotfiles\/traycollapse"};$/;"	v	typeref:typename:const char * []
 toggletag	dwm.c	/^toggletag(const Arg *arg)$/;"	f	typeref:typename:void
 toggleview	dwm.c	/^toggleview(const Arg *arg)$/;"	f	typeref:typename:void
 top	grayblocks/config.ini	/^margin-top = 0$/;"	k	section:global/wm
