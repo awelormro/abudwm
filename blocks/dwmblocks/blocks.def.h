@@ -6,7 +6,7 @@ static const Block blocks[] = {
   {"|^c#00FF5F^  ^c#FFFFFF^", "echo $(pamixer --get-volume) %",                            1,   0},
   {"|^c#F5F505^ 󰃠 ^c#FFFFFF^", "bash ~/dwmblocks/bright.sh",                                    1,   0},
   {"|^c#F5F505^ 󰁹 ^c#FFFFFF^", "acpi -b | grep -o '[0-9]\\+%'",                             2,   0},
-	{"|^c#00FF5F^  ^c#FFFFFF^", "date '+%b %d (%a) %I:%M%p'",					                          5,   0},
+	{"|^c#00FF5F^  ^c#FFFFFF^^c#FFFFFF^", "date '+%b %d (%a) %I:%M%p'",					                          5,   0},
   {"|^c#F5F505^  ^c#FFFFFF^", "iwgetid -r", 30, 0},
 };
 
