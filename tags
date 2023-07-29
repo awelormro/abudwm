@@ -132,6 +132,8 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -1562,6 +1584,10	dwm-ewmhtags-6.2.diff	/^@@ -1562,6 +1584,10 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1566,6 +1748,10	dwm-systray-6.4.diff	/^@@ -1566,6 +1748,10 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1566,6 +1748,10	systray.diff	/^@@ -1566,6 +1748,10 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
+-1568,9 +1569,14	dwm-rainbowtags-6.2-alpha.diff	/^@@ -1568,9 +1569,14 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
+-1568,9 +1569,14	dwm-rainbowtags-6.2.diff	/^@@ -1568,9 +1569,14 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1571,7 +1678,8	dwm-status2d-6.3.diff	/^@@ -1571,7 +1678,8 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1573,6 +1759,9	dwm-systray-6.4.diff	/^@@ -1573,6 +1759,9 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1573,6 +1759,9	systray.diff	/^@@ -1573,6 +1759,9 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
@@ -183,6 +185,8 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -208,7 +208,7	dwm-xresources-20210827-138b405.diff	/^@@ -208,7 +208,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)$/;"	h	modifiedFile:a/drw.c
 -208,7 +212,6	dwm-vanitygaps-6.2.diff	/^@@ -208,7 +212,6 @@ static void sigchld(int unused);$/;"	h	modifiedFile:a/dwm.c
 -208,7 +214,6	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -208,7 +214,6 @@ static void showhide(Client *c);$/;"	h	modifiedFile:a/dwm.c
+-21,6 +21,18	dwm-rainbowtags-6.2.diff	/^@@ -21,6 +21,18 @@ static const char *colors[][3]      = {$/;"	h	modifiedFile:a/config.def.h
+-21,6 +21,20	dwm-rainbowtags-6.2-alpha.diff	/^@@ -21,6 +21,20 @@ static const char *colors[][3]      = {$/;"	h	modifiedFile:a/config.def.h
 -2110,6 +2159,17	dwm-xrdb-6.4.diff	/^@@ -2110,6 +2159,17 @@ xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	h	modifiedFile:a/dwm.c
 -2122,6 +2465,22	dwm-systray-6.4.diff	/^@@ -2122,6 +2465,22 @@ xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	h	modifiedFile:a/dwm.c
 -2122,6 +2465,22	systray.diff	/^@@ -2122,6 +2465,22 @@ xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	h	modifiedFile:a/dwm.c
@@ -203,6 +207,8 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -237,7 +238,7	dwm-status2d-6.3.diff	/^@@ -237,7 +238,7 @@ static void zoom(const Arg *arg);$/;"	h	modifiedFile:a/dwm.c
 -258,9 +289,10	dwm-systray-6.4.diff	/^@@ -258,9 +289,10 @@ static void (*handler[LASTEvent]) (XEvent *) = {$/;"	h	modifiedFile:a/dwm.c
 -258,9 +289,10	systray.diff	/^@@ -258,9 +289,10 @@ static void (*handler[LASTEvent]) (XEvent *) = {$/;"	h	modifiedFile:a/dwm.c
+-264,6 +264,7	dwm-rainbowtags-6.2-alpha.diff	/^@@ -264,6 +264,7 @@ static Atom wmatom[WMLast], netatom[NetLast];$/;"	h	modifiedFile:a/dwm.c
+-264,6 +264,7	dwm-rainbowtags-6.2.diff	/^@@ -264,6 +264,7 @@ static Atom wmatom[WMLast], netatom[NetLast];$/;"	h	modifiedFile:a/dwm.c
 -275,6 +276,34	dwm-cool-autostart-6.2.diff	/^@@ -275,6 +276,34 @@ static Window root, wmcheckwin;$/;"	h	modifiedFile:a/dwm.c
 -29,6 +29,7	dwm-autostart-20210120-cb3f58a.diff	/^@@ -29,6 +29,7 @@$/;"	h	modifiedFile:a/dwm.c
 -3,6 +3,11	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -3,6 +3,11 @@$/;"	h	modifiedFile:a/config.def.h
@@ -258,6 +264,9 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -708,13 +801,17	systray.diff	/^@@ -708,13 +801,17 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
 -71,6 +91,22	dwm-vanitygaps-6.2.diff	/^@@ -71,6 +91,22 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -71,7 +91,26	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -71,7 +91,26 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-717,7 +718,7	dwm-rainbowtags-6.2-alpha.diff	/^@@ -717,7 +718,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-717,7 +718,7	dwm-rainbowtags-6.2.diff	/^@@ -717,7 +718,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-719,9 +719,10	dwm-activetagindicatorbar-6.2.diff	/^@@ -719,9 +719,10 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:dwm-a/dwm.c
 -735,7 +832,7	dwm-systray-6.4.diff	/^@@ -735,7 +832,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
 -735,7 +832,7	systray.diff	/^@@ -735,7 +832,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
 -746,7 +843,7	dwm-systray-6.4.diff	/^@@ -746,7 +843,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
@@ -265,6 +274,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -783,8 +880,11	dwm-systray-6.4.diff	/^@@ -783,8 +880,11 @@ expose(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
 -783,8 +880,11	systray.diff	/^@@ -783,8 +880,11 @@ expose(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
 -784,6 +784,12	dwm-status2d-xrdb-6.2.diff	/^@@ -784,6 +784,12 @@ drawstatusbar(Monitor *m, int bh, char* stext) {$/;"	h	modifiedFile:a/dwm.c
+-825,6 +825,7	dwm-focusmonmouse-6.2.diff	/^@@ -825,6 +825,7 @@ focusmon(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -84,6 +85,7	dwm-xrdb-6.4.diff	/^@@ -84,6 +85,7 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -87,6 +87,7	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -87,6 +87,7 @@ typedef struct Client Client;$/;"	h	modifiedFile:a/dwm.c
 -870,14 +970,32	dwm-systray-6.4.diff	/^@@ -870,14 +970,32 @@ getatomprop(Client *c, Atom prop)$/;"	h	modifiedFile:a/dwm.c
@@ -507,6 +517,8 @@ a/config.def.h	dwm-6.2-urg-border.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-anybar-20200810-bb2e722.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-cfacts-vanitygaps-6.4_combo.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-cool-autostart-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	dwm-rainbowtags-6.2-alpha.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	dwm-rainbowtags-6.2.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-status2d-xrdb-6.2.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-systray-6.4.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-vanitygaps-6.2.diff	/^--- a\/config.def.h$/;"	m
@@ -526,6 +538,9 @@ a/dwm.c	dwm-autostart-20210120-cb3f58a.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-cfacts-vanitygaps-6.4_combo.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-cool-autostart-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-ewmhtags-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	dwm-focusmonmouse-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	dwm-rainbowtags-6.2-alpha.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	dwm-rainbowtags-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-status2d-6.3.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-status2d-xrdb-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-systray-6.4.diff	/^--- a\/dwm.c$/;"	m
@@ -781,6 +796,7 @@ dummysighandler	blocks/dwmblocks/dwmblocks.c	/^void dummysighandler(int signum)$
 dummysighandler	dwmblocks/dwmblocks.c	/^void dummysighandler(int signum)$/;"	f	typeref:typename:void
 dwindle	vanitygaps.c	/^dwindle(Monitor *m)$/;"	f	typeref:typename:void
 dwm	Makefile	/^dwm: ${OBJ}$/;"	t
+dwm-a/dwm.c	dwm-activetagindicatorbar-6.2.diff	/^--- dwm-a\/dwm.c	2019-02-02 06:55:28.000000000 -0600$/;"	m
 dwmblocks	blocks/dwmblocks/Makefile	/^dwmblocks: dwmblocks.c blocks.def.h blocks.h$/;"	t
 dwmblocks	blocks/dwmblocks/README.md	/^# dwmblocks$/;"	c
 dwmblocks	dwmblocks/Makefile	/^dwmblocks: dwmblocks.c blocks.def.h blocks.h$/;"	t
@@ -1527,9 +1543,11 @@ symbol	dwm.c	/^	const char *symbol;$/;"	m	struct:__anon0f53a99e0908	typeref:type
 tag	dwm.c	/^tag(const Arg *arg)$/;"	f	typeref:typename:void
 tagmon	dwm.c	/^tagmon(const Arg *arg)$/;"	f	typeref:typename:void
 tags	config.def.h	/^static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
-tags	config.h	/^static const char *tags[] = { "^c#F000001", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
+tags	config.h	/^static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:Client	typeref:typename:unsigned int	file:
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:unsigned int	file:
+tagscheme	dwm.c	/^static Clr **tagscheme;$/;"	v	typeref:typename:Clr **	file:
+tagsel	config.def.h	/^static const char *tagsel[][2] = {$/;"	v	typeref:typename:const char * [][2]
 tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:unsigned int[2]	file:
 tail	grayblocks/user_modules.ini	/^tail = true$/;"	k	section:module/updates
 temperature	grayblocks/modules.ini	/^warn-temperature = 65$/;"	k	section:module/temperature
