@@ -132,6 +132,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -1521,6 +1531,24	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -1521,6 +1531,24 @@ setlayout(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -1546,7 +1582,7	dwm-anybar-20200810-bb2e722.diff	/^@@ -1546,7 +1582,7 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1547,7 +1549,10	dwm-barpadding-20211020-a786211.diff	/^@@ -1547,7 +1549,10 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
+-1548,8 +1548,8	dwm-statuspadding-6.3.diff	/^@@ -1548,8 +1548,8 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1562,6 +1584,10	dwm-ewmhtags-6.2.diff	/^@@ -1562,6 +1584,10 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1566,6 +1748,10	dwm-systray-6.4.diff	/^@@ -1566,6 +1748,10 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
 -1566,6 +1748,10	systray.diff	/^@@ -1566,6 +1748,10 @@ setup(void)$/;"	h	modifiedFile:a/dwm.c
@@ -242,6 +243,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -485,6 +517,13	systray.diff	/^@@ -485,6 +517,13 @@ cleanup(void)$/;"	h	modifiedFile:a/dwm.c
 -485,7 +486,7	dwm-status2d-6.3.diff	/^@@ -485,7 +486,7 @@ cleanup(void)$/;"	h	modifiedFile:a/dwm.c
 -5,6 +5,8	dwm-barpadding-20211020-a786211.diff	/^@@ -5,6 +5,8 @@ static const unsigned int borderpx  = 1;        \/* border pixel of windows *\/$/;"	h	modifiedFile:a/config.def.h
+-5,6 +5,8	dwm-statuspadding-6.3.diff	/^@@ -5,6 +5,8 @@ static const unsigned int borderpx  = 1;        \/* border pixel of windows *\/$/;"	h	modifiedFile:a/config.def.h
 -5,6 +5,9	dwm-anybar-20200810-bb2e722.diff	/^@@ -5,6 +5,9 @@ static const unsigned int borderpx  = 1;        \/* border pixel of windows *\/$/;"	h	modifiedFile:a/config.def.h
 -505,8 +509,10	dwm-anybar-20200810-bb2e722.diff	/^@@ -505,8 +509,10 @@ cleanupmon(Monitor *mon)$/;"	h	modifiedFile:a/dwm.c
 -516,9 +555,58	dwm-systray-6.4.diff	/^@@ -516,9 +555,58 @@ cleanupmon(Monitor *mon)$/;"	h	modifiedFile:a/dwm.c
@@ -278,6 +280,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -707,9 +816,7	dwm-status2d-6.3.diff	/^@@ -707,9 +816,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
 -708,13 +801,17	dwm-systray-6.4.diff	/^@@ -708,13 +801,17 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
 -708,13 +801,17	systray.diff	/^@@ -708,13 +801,17 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
+-708,8 +708,8	dwm-statuspadding-6.3.diff	/^@@ -708,8 +708,8 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
 -71,6 +91,22	dwm-vanitygaps-6.2.diff	/^@@ -71,6 +91,22 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -71,7 +91,26	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -71,7 +91,26 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -717,7 +718,7	dwm-rainbowtags-6.2-alpha.diff	/^@@ -717,7 +718,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
@@ -542,6 +545,7 @@ a/config.def.h	dwm-cool-autostart-6.2.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-rainbowtags-6.2-alpha.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-rainbowtags-6.2.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-status2d-xrdb-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	dwm-statuspadding-6.3.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-systray-6.4.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-vanitygaps-6.2.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-xrdb-6.4.diff	/^--- a\/config.def.h$/;"	m
@@ -567,6 +571,7 @@ a/dwm.c	dwm-rainbowtags-6.2-alpha.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-rainbowtags-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-status2d-6.3.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-status2d-xrdb-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	dwm-statuspadding-6.3.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-systray-6.4.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-vanitygaps-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-xrdb-6.4.diff	/^--- a\/dwm.c$/;"	m
