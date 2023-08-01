@@ -1545,6 +1545,7 @@ showbar	config.def.h	/^static const int showbar            = 0;        \/* 0 mea
 showbar	config.h	/^static const int showbar            = 0;        \/* 0 means no bar *\/$/;"	v	typeref:typename:const int
 showbar	dwm.c	/^	int showbar;$/;"	m	struct:Monitor	typeref:typename:int	file:
 showhide	dwm.c	/^showhide(Client *c)$/;"	f	typeref:typename:void
+sidepad	config.def.h	/^static const int sidepad            = 10;       \/* horizontal padding of bar *\/$/;"	v	typeref:typename:const int
 sighandler	blocks/dwmblocks/dwmblocks.c	/^void sighandler(int signum)$/;"	f	typeref:typename:void
 sighandler	dwmblocks/dwmblocks.c	/^void sighandler(int signum)$/;"	f	typeref:typename:void
 signal	blocks/dwmblocks/dwmblocks.c	/^	unsigned int signal;$/;"	m	struct:__anon7a0228fe0108	typeref:typename:unsigned int	file:
@@ -1569,6 +1570,7 @@ soundcard	grayblocks/bars.ini	/^speaker-soundcard = default$/;"	k	section:module
 soundcard	grayblocks/modules.ini	/^headphone-soundcard = default$/;"	k	section:module/alsa
 soundcard	grayblocks/modules.ini	/^master-soundcard = default$/;"	k	section:module/alsa
 soundcard	grayblocks/modules.ini	/^speaker-soundcard = default$/;"	k	section:module/alsa
+sp	dwm.c	/^static int sp;               \/* side padding for bar *\/$/;"	v	typeref:typename:int	file:
 spawn	dwm.c	/^spawn(const Arg *arg)$/;"	f	typeref:typename:void
 spiral	vanitygaps.c	/^spiral(Monitor *m)$/;"	f	typeref:typename:void
 srcshotcmd	config.def.h	/^static const char *srcshotcmd[] = { "bash", "\/home\/abu\/.config\/rofi\/applets\/bin\/screensho/;"	v	typeref:typename:const char * []
@@ -1776,6 +1778,7 @@ value	grayblocks/config.ini	/^dim-value = 1.0$/;"	k	section:bar/main
 value	grayblocks/preview.ini	/^dim-value = 1.0$/;"	k	section:bar/bottom
 values	grayblocks/bars.ini	/^fixed-values = false$/;"	k	section:module/filesystem_bar
 values	grayblocks/modules.ini	/^fixed-values = true$/;"	k	section:module/filesystem
+vertpad	config.def.h	/^static const int vertpad            = 10;       \/* vertical padding of bar *\/$/;"	v	typeref:typename:const int
 view	dwm.c	/^view(const Arg *arg)$/;"	f	typeref:typename:void
 volume	grayblocks/bars.ini	/^format-volume = <ramp-volume> <bar-volume>$/;"	k	section:module/volume
 volume	grayblocks/bars.ini	/^label-volume = %percentage%%$/;"	k	section:module/volume
@@ -1783,6 +1786,7 @@ volume	grayblocks/modules.ini	/^format-volume = <ramp-volume> <label-volume>$/;"
 volume	grayblocks/modules.ini	/^format-volume = <ramp-volume> <label-volume>$/;"	k	section:module/pulseaudio
 volume	grayblocks/modules.ini	/^label-volume = %percentage%%$/;"	k	section:module/alsa
 volume	grayblocks/modules.ini	/^label-volume = %percentage%%$/;"	k	section:module/pulseaudio
+vp	dwm.c	/^static int vp;               \/* vertical padding for bar *\/$/;"	v	typeref:typename:int	file:
 w	drw.h	/^	unsigned int w, h;$/;"	m	struct:__anon0f5116480308	typeref:typename:unsigned int
 w	dwm.c	/^	int x, y, w, h;$/;"	m	struct:Client	typeref:typename:int	file:
 warn	grayblocks/modules.ini	/^format-warn = <ramp> <label-warn>$/;"	k	section:module/temperature
