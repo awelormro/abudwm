@@ -92,6 +92,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -1003,6 +1008,25	dwm-alternativetags-6.3.diff	/^@@ -1003,6 +1008,25 @@ keypress(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
 -101,8 +106,8	dwm-systray-6.4.diff	/^@@ -101,8 +106,8 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -101,8 +106,8	systray.diff	/^@@ -101,8 +106,8 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
+-1014,6 +1032,37	dwm-xrdb-6.2.diff	/^@@ -1014,6 +1032,37 @@ killclient(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -1018,7 +1136,8	dwm-systray-6.4.diff	/^@@ -1018,7 +1136,8 @@ killclient(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -1018,7 +1136,8	systray.diff	/^@@ -1018,7 +1136,8 @@ killclient(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -1019,6 +1037,37	dwm-xrdb-6.4.diff	/^@@ -1019,6 +1037,37 @@ killclient(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
@@ -161,6 +162,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -1732,6 +1767,7	dwm-ewmhtags-6.2.diff	/^@@ -1732,6 +1767,7 @@ toggletag(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -1744,6 +1780,7	dwm-ewmhtags-6.2.diff	/^@@ -1744,6 +1780,7 @@ toggleview(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -177,6 +178,7	dwm-alternativetags-6.3.diff	/^@@ -177,6 +178,7 @@ static void grabbuttons(Client *c, int focused);$/;"	h	modifiedFile:a/dwm.c
+-177,6 +193,7	dwm-xrdb-6.2.diff	/^@@ -177,6 +193,7 @@ static void grabkeys(void);$/;"	h	modifiedFile:a/dwm.c
 -178,6 +194,7	dwm-xrdb-6.4.diff	/^@@ -178,6 +194,7 @@ static void grabkeys(void);$/;"	h	modifiedFile:a/dwm.c
 -1787,10 +1831,26	dwm-anybar-20200810-bb2e722.diff	/^@@ -1787,10 +1831,26 @@ unmanage(Client *c, int destroyed)$/;"	h	modifiedFile:a/dwm.c
 -179,6 +179,7	dwm-anybar-20200810-bb2e722.diff	/^@@ -179,6 +179,7 @@ static void incnmaster(const Arg *arg);$/;"	h	modifiedFile:a/dwm.c
@@ -191,6 +193,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -207,6 +208,7	dwm-anybar-20200810-bb2e722.diff	/^@@ -207,6 +208,7 @@ static void seturgent(Client *c, int urg);$/;"	h	modifiedFile:a/dwm.c
 -207,6 +232,7	dwm-systray-6.4.diff	/^@@ -207,6 +232,7 @@ static void seturgent(Client *c, int urg);$/;"	h	modifiedFile:a/dwm.c
 -207,6 +232,7	systray.diff	/^@@ -207,6 +232,7 @@ static void seturgent(Client *c, int urg);$/;"	h	modifiedFile:a/dwm.c
+-207,7 +207,7	dwm-xrdb-6.2.diff	/^@@ -207,7 +207,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)$/;"	h	modifiedFile:a/drw.c
 -2077,6 +2141,28	dwm-anybar-20200810-bb2e722.diff	/^@@ -2077,6 +2141,28 @@ wintomon(Window w)$/;"	h	modifiedFile:a/dwm.c
 -208,7 +208,7	dwm-xresources-20210827-138b405.diff	/^@@ -208,7 +208,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)$/;"	h	modifiedFile:a/drw.c
 -208,7 +212,6	dwm-vanitygaps-6.2.diff	/^@@ -208,7 +212,6 @@ static void sigchld(int unused);$/;"	h	modifiedFile:a/dwm.c
@@ -198,11 +201,13 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -21,6 +21,18	dwm-rainbowtags-6.2.diff	/^@@ -21,6 +21,18 @@ static const char *colors[][3]      = {$/;"	h	modifiedFile:a/config.def.h
 -21,6 +21,20	dwm-rainbowtags-6.2-alpha.diff	/^@@ -21,6 +21,20 @@ static const char *colors[][3]      = {$/;"	h	modifiedFile:a/config.def.h
 -210,6 +212,7	dwm-alternativetags-6.3.diff	/^@@ -210,6 +212,7 @@ static void spawn(const Arg *arg);$/;"	h	modifiedFile:a/dwm.c
+-2110,6 +2159,17	dwm-xrdb-6.2.diff	/^@@ -2110,6 +2159,17 @@ xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	h	modifiedFile:a/dwm.c
 -2110,6 +2159,17	dwm-xrdb-6.4.diff	/^@@ -2110,6 +2159,17 @@ xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	h	modifiedFile:a/dwm.c
 -2122,6 +2465,22	dwm-systray-6.4.diff	/^@@ -2122,6 +2465,22 @@ xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	h	modifiedFile:a/dwm.c
 -2122,6 +2465,22	systray.diff	/^@@ -2122,6 +2465,22 @@ xerrorstart(Display *dpy, XErrorEvent *ee)$/;"	h	modifiedFile:a/dwm.c
 -2127,6 +2143,60	dwm-xresources-20210827-138b405.diff	/^@@ -2127,6 +2143,60 @@ zoom(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
 -2134,6 +2194,8	dwm-xrdb-6.4.diff	/^@@ -2134,6 +2194,8 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
+-2136,6 +2196,8	dwm-xrdb-6.2.diff	/^@@ -2136,6 +2196,8 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
 -2139,6 +2194,7	dwm-cool-autostart-6.2.diff	/^@@ -2139,6 +2194,7 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
 -2139,6 +2209,8	dwm-xresources-20210827-138b405.diff	/^@@ -2139,6 +2209,8 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
 -2142,6 +2223,7	dwm-autostart-20210120-cb3f58a.diff	/^@@ -2142,6 +2223,7 @@ main(int argc, char *argv[])$/;"	h	modifiedFile:a/dwm.c
@@ -211,6 +216,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -224,18 +250,23	dwm-systray-6.4.diff	/^@@ -224,18 +250,23 @@ static int updategeom(void);$/;"	h	modifiedFile:a/dwm.c
 -224,18 +250,23	systray.diff	/^@@ -224,18 +250,23 @@ static int updategeom(void);$/;"	h	modifiedFile:a/dwm.c
 -230,6 +233,7	dwm-anybar-20200810-bb2e722.diff	/^@@ -230,6 +233,7 @@ static void updatewmhints(Client *c);$/;"	h	modifiedFile:a/dwm.c
+-232,6 +249,7	dwm-xrdb-6.2.diff	/^@@ -232,6 +249,7 @@ static Monitor *wintomon(Window w);$/;"	h	modifiedFile:a/dwm.c
 -233,6 +250,7	dwm-xrdb-6.4.diff	/^@@ -233,6 +250,7 @@ static Monitor *wintomon(Window w);$/;"	h	modifiedFile:a/dwm.c
 -234,6 +234,7	dwm-cool-autostart-6.2.diff	/^@@ -234,6 +234,7 @@ static int xerror(Display *dpy, XErrorEvent *ee);$/;"	h	modifiedFile:a/dwm.c
 -234,6 +248,8	dwm-xresources-20210827-138b405.diff	/^@@ -234,6 +248,8 @@ static int xerror(Display *dpy, XErrorEvent *ee);$/;"	h	modifiedFile:a/dwm.c
@@ -230,10 +236,12 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -3,6 +3,11	systray.diff	/^@@ -3,6 +3,11 @@$/;"	h	modifiedFile:a/config.def.h
 -30,6 +30,14	dwm-autostart-20210120-cb3f58a.diff	/^@@ -30,6 +30,14 @@ top left corner.  The tags which are applied to one or more windows are$/;"	h	modifiedFile:a/dwm.1
 -32,9 +34,9	dwm-xresources-20210827-138b405.diff	/^@@ -32,9 +34,9 @@ static const Rule rules[] = {$/;"	h	modifiedFile:a/config.def.h
+-35,6 +35,7	dwm-xrdb-6.2.diff	/^@@ -35,6 +35,7 @@$/;"	h	modifiedFile:a/dwm.c
 -35,6 +35,7	dwm-xrdb-6.4.diff	/^@@ -35,6 +35,7 @@$/;"	h	modifiedFile:a/dwm.c
 -36,11 +41,26	dwm-vanitygaps-6.2.diff	/^@@ -36,11 +41,26 @@ static const float mfact     = 0.55; \/* factor of master area size [0.05..0/;"	h	modifiedFile:a/config.def.h
 -36,6 +36,7	dwm-xresources-20210827-138b405.diff	/^@@ -36,6 +36,7 @@$/;"	h	modifiedFile:a/dwm.c
 -37,11 +42,26	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -37,11 +42,26 @@ static const int nmaster     = 1;    \/* number of clients in master area *\/$/;"	h	modifiedFile:a/config.def.h
+-39,7 +39,7	dwm-xrdb-6.2.diff	/^@@ -39,7 +39,7 @@ void drw_font_getexts(Fnt *font, const char *text, unsigned int len, unsigned /;"	h	modifiedFile:a/drw.h
 -39,7 +39,7	dwm-xresources-20210827-138b405.diff	/^@@ -39,7 +39,7 @@ void drw_font_getexts(Fnt *font, const char *text, unsigned int len, unsigned /;"	h	modifiedFile:a/drw.h
 -40,7 +40,7	dwm-xrdb-6.4.diff	/^@@ -40,7 +40,7 @@ void drw_font_getexts(Fnt *font, const char *text, unsigned int len, unsigned /;"	h	modifiedFile:a/drw.h
 -442,7 +474,7	dwm-systray-6.4.diff	/^@@ -442,7 +474,7 @@ buttonpress(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
@@ -249,8 +257,10 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -516,9 +555,58	dwm-systray-6.4.diff	/^@@ -516,9 +555,58 @@ cleanupmon(Monitor *mon)$/;"	h	modifiedFile:a/dwm.c
 -516,9 +555,58	systray.diff	/^@@ -516,9 +555,58 @@ cleanupmon(Monitor *mon)$/;"	h	modifiedFile:a/dwm.c
 -55,6 +55,7	dwm-ewmhtags-6.2.diff	/^@@ -55,6 +55,7 @@$/;"	h	modifiedFile:a/dwm.c
+-56,6 +57,21	dwm-xrdb-6.2.diff	/^@@ -56,6 +57,21 @@$/;"	h	modifiedFile:a/dwm.c
 -56,6 +57,21	dwm-xrdb-6.4.diff	/^@@ -56,6 +57,21 @@$/;"	h	modifiedFile:a/dwm.c
 -56,7 +48,7	wal.patch	/^@@ -56,7 +48,7 @@ static const Layout layouts[] = {$/;"	h	modifiedFile:a/config.def.h
+-56,7 +57,7	dwm-xrdb-6.2.diff	/^@@ -56,7 +57,7 @@ static const Layout layouts[] = {$/;"	h	modifiedFile:a/config.def.h
 -56,7 +57,7	dwm-xrdb-6.4.diff	/^@@ -56,7 +57,7 @@ static const Layout layouts[] = {$/;"	h	modifiedFile:a/config.def.h
 -568,7 +570,7	dwm-barpadding-20211020-a786211.diff	/^@@ -568,7 +570,7 @@ configurenotify(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
 -568,7 +574,7	dwm-anybar-20200810-bb2e722.diff	/^@@ -568,7 +574,7 @@ configurenotify(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
@@ -274,6 +284,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -699,7 +703,7	dwm-alternativetags-6.3.diff	/^@@ -699,7 +703,7 @@ dirtomon(int dir)$/;"	h	modifiedFile:a/dwm.c
 -699,7 +792,7	dwm-systray-6.4.diff	/^@@ -699,7 +792,7 @@ dirtomon(int dir)$/;"	h	modifiedFile:a/dwm.c
 -699,7 +792,7	systray.diff	/^@@ -699,7 +792,7 @@ dirtomon(int dir)$/;"	h	modifiedFile:a/dwm.c
+-7,15 +7,16	dwm-xrdb-6.2.diff	/^@@ -7,15 +7,16 @@ static const int showbar            = 1;        \/* 0 means no bar *\/$/;"	h	modifiedFile:a/config.def.h
 -7,15 +7,16	dwm-xrdb-6.4.diff	/^@@ -7,15 +7,16 @@ static const int showbar            = 1;        \/* 0 means no bar *\/$/;"	h	modifiedFile:a/config.def.h
 -7,16 +9,6	wal.patch	/^@@ -7,16 +9,6 @@ static const int showbar            = 1;        \/* 0 means no bar *\/$/;"	h	modifiedFile:a/config.def.h
 -706,7 +708,7	dwm-barpadding-20211020-a786211.diff	/^@@ -706,7 +708,7 @@ drawbar(Monitor *m)$/;"	h	modifiedFile:a/dwm.c
@@ -297,6 +308,7 @@ ${OBJ}	Makefile	/^${OBJ}: config.h config.mk$/;"	t
 -783,8 +880,11	systray.diff	/^@@ -783,8 +880,11 @@ expose(XEvent *e)$/;"	h	modifiedFile:a/dwm.c
 -784,6 +784,12	dwm-status2d-xrdb-6.2.diff	/^@@ -784,6 +784,12 @@ drawstatusbar(Monitor *m, int bh, char* stext) {$/;"	h	modifiedFile:a/dwm.c
 -825,6 +825,7	dwm-focusmonmouse-6.2.diff	/^@@ -825,6 +825,7 @@ focusmon(const Arg *arg)$/;"	h	modifiedFile:a/dwm.c
+-84,6 +85,7	dwm-xrdb-6.2.diff	/^@@ -84,6 +85,7 @@ static Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -84,6 +85,7	dwm-xrdb-6.4.diff	/^@@ -84,6 +85,7 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -84,6 +86,7	dwm-alternativetags-6.3.diff	/^@@ -84,6 +86,7 @@ static const Key keys[] = {$/;"	h	modifiedFile:a/config.def.h
 -87,6 +87,7	dwm-cfacts-vanitygaps-6.4_combo.diff	/^@@ -87,6 +87,7 @@ typedef struct Client Client;$/;"	h	modifiedFile:a/dwm.c
@@ -548,13 +560,16 @@ a/config.def.h	dwm-status2d-xrdb-6.2.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-statuspadding-6.3.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-systray-6.4.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-vanitygaps-6.2.diff	/^--- a\/config.def.h$/;"	m
+a/config.def.h	dwm-xrdb-6.2.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-xrdb-6.4.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	dwm-xresources-20210827-138b405.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	systray.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	urgentborder.diff	/^--- a\/config.def.h$/;"	m
 a/config.def.h	wal.patch	/^--- a\/config.def.h$/;"	m
+a/drw.c	dwm-xrdb-6.2.diff	/^--- a\/drw.c$/;"	m
 a/drw.c	dwm-xrdb-6.4.diff	/^--- a\/drw.c$/;"	m
 a/drw.c	dwm-xresources-20210827-138b405.diff	/^--- a\/drw.c$/;"	m
+a/drw.h	dwm-xrdb-6.2.diff	/^--- a\/drw.h$/;"	m
 a/drw.h	dwm-xrdb-6.4.diff	/^--- a\/drw.h$/;"	m
 a/drw.h	dwm-xresources-20210827-138b405.diff	/^--- a\/drw.h$/;"	m
 a/dwm.1	dwm-autostart-20210120-cb3f58a.diff	/^--- a\/dwm.1$/;"	m
@@ -574,6 +589,7 @@ a/dwm.c	dwm-status2d-xrdb-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-statuspadding-6.3.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-systray-6.4.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-vanitygaps-6.2.diff	/^--- a\/dwm.c$/;"	m
+a/dwm.c	dwm-xrdb-6.2.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-xrdb-6.4.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	dwm-xresources-20210827-138b405.diff	/^--- a\/dwm.c$/;"	m
 a/dwm.c	systray.diff	/^--- a\/dwm.c$/;"	m
@@ -1590,6 +1606,40 @@ tail	grayblocks/user_modules.ini	/^tail = true$/;"	k	section:module/updates
 temperature	grayblocks/modules.ini	/^warn-temperature = 65$/;"	k	section:module/temperature
 termcmd	config.def.h	/^static const char *termcmd[] = { "st", NULL };$/;"	v	typeref:typename:const char * []
 termcmd	config.h	/^static const char *termcmd[] = { "st", NULL };$/;"	v	typeref:typename:const char * []
+termcol0	config.def.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol0	config.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol1	config.def.h	/^static char termcol1[] = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcol1	config.h	/^static char termcol1[] = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcol10	config.def.h	/^static char termcol10[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol10	config.h	/^static char termcol10[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol11	config.def.h	/^static char termcol11[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol11	config.h	/^static char termcol11[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol12	config.def.h	/^static char termcol12[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol12	config.h	/^static char termcol12[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol13	config.def.h	/^static char termcol13[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol13	config.h	/^static char termcol13[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol14	config.def.h	/^static char termcol14[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol14	config.h	/^static char termcol14[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol15	config.def.h	/^static char termcol15[] = "#ffffff"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol15	config.h	/^static char termcol15[] = "#ffffff"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol2	config.def.h	/^static char termcol2[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol2	config.h	/^static char termcol2[] = "#33ff00"; \/* green   *\/$/;"	v	typeref:typename:char[]
+termcol3	config.def.h	/^static char termcol3[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol3	config.h	/^static char termcol3[] = "#ff0099"; \/* yellow  *\/$/;"	v	typeref:typename:char[]
+termcol4	config.def.h	/^static char termcol4[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol4	config.h	/^static char termcol4[] = "#0066ff"; \/* blue    *\/$/;"	v	typeref:typename:char[]
+termcol5	config.def.h	/^static char termcol5[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol5	config.h	/^static char termcol5[] = "#cc00ff"; \/* magenta *\/$/;"	v	typeref:typename:char[]
+termcol6	config.def.h	/^static char termcol6[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol6	config.h	/^static char termcol6[] = "#00ffff"; \/* cyan    *\/$/;"	v	typeref:typename:char[]
+termcol7	config.def.h	/^static char termcol7[] = "#d0d0d0"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol7	config.h	/^static char termcol7[] = "#d0d0d0"; \/* white   *\/$/;"	v	typeref:typename:char[]
+termcol8	config.def.h	/^static char termcol8[]  = "#808080"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol8	config.h	/^static char termcol8[]  = "#808080"; \/* black   *\/$/;"	v	typeref:typename:char[]
+termcol9	config.def.h	/^static char termcol9[]  = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcol9	config.h	/^static char termcol9[]  = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
+termcolor	config.def.h	/^static char *termcolor[] = {$/;"	v	typeref:typename:char * []
+termcolor	config.h	/^static char *termcolor[] = {$/;"	v	typeref:typename:char * []
 termhandler	blocks/dwmblocks/dwmblocks.c	/^void termhandler()$/;"	f	typeref:typename:void
 termhandler	dwmblocks/dwmblocks.c	/^void termhandler()$/;"	f	typeref:typename:void
 tile	vanitygaps.c	/^tile(Monitor *m)$/;"	f	typeref:typename:void	file:
