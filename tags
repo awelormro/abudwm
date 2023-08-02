@@ -1546,6 +1546,7 @@ showbar	config.h	/^static const int showbar            = 0;        \/* 0 means n
 showbar	dwm.c	/^	int showbar;$/;"	m	struct:Monitor	typeref:typename:int	file:
 showhide	dwm.c	/^showhide(Client *c)$/;"	f	typeref:typename:void
 sidepad	config.def.h	/^static const int sidepad            = 10;       \/* horizontal padding of bar *\/$/;"	v	typeref:typename:const int
+sidepad	config.h	/^static const int sidepad            = 10;       \/* horizontal padding of bar *\/$/;"	v	typeref:typename:const int
 sighandler	blocks/dwmblocks/dwmblocks.c	/^void sighandler(int signum)$/;"	f	typeref:typename:void
 sighandler	dwmblocks/dwmblocks.c	/^void sighandler(int signum)$/;"	f	typeref:typename:void
 signal	blocks/dwmblocks/dwmblocks.c	/^	unsigned int signal;$/;"	m	struct:__anon7a0228fe0108	typeref:typename:unsigned int	file:
@@ -1778,7 +1779,8 @@ value	grayblocks/config.ini	/^dim-value = 1.0$/;"	k	section:bar/main
 value	grayblocks/preview.ini	/^dim-value = 1.0$/;"	k	section:bar/bottom
 values	grayblocks/bars.ini	/^fixed-values = false$/;"	k	section:module/filesystem_bar
 values	grayblocks/modules.ini	/^fixed-values = true$/;"	k	section:module/filesystem
-vertpad	config.def.h	/^static const int vertpad            = 10;       \/* vertical padding of bar *\/$/;"	v	typeref:typename:const int
+vertpad	config.def.h	/^static const int vertpad            = 5;       \/* vertical padding of bar *\/$/;"	v	typeref:typename:const int
+vertpad	config.h	/^static const int vertpad            = 5;       \/* vertical padding of bar *\/$/;"	v	typeref:typename:const int
 view	dwm.c	/^view(const Arg *arg)$/;"	f	typeref:typename:void
 volume	grayblocks/bars.ini	/^format-volume = <ramp-volume> <bar-volume>$/;"	k	section:module/volume
 volume	grayblocks/bars.ini	/^label-volume = %percentage%%$/;"	k	section:module/volume
