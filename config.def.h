@@ -65,18 +65,21 @@ static const char *tags[] = { "", "", "", "", "󰣇", "", "", 
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const int momentaryalttags = 0; /* 1 means alttags will show only when key is held down*/
 
-static const char *tagsel[][2] = {
-	/* { "#ffffff", "#ff0000" }, */
-  { termcol7, termcol1 },
-  { termcol7, termcol2 },
-	{ termcol7, termcol3 },
-	{ termcol7, termcol4 },
-	{ termcol7, termcol5 },
-	{ termcol7, termcol9 },
-	{ termcol7, termcol10 },
-	{ termcol7, termcol11 },
-	{ termcol7, termcol12 },
-};
+
+
+/* static const char *tagsel[][2] = { */
+/* 	{ "#ffffff", "#ff0000" }, */
+/* 	{ "#ffffff", "#ff7f00" }, */
+/* 	{ "#000000", "#ffff00" }, */
+/* 	{ "#000000", "#00ff00" }, */
+/* 	{ "#ffffff", "#0000ff" }, */
+/* 	{ "#ffffff", "#4b0082" }, */
+/* 	{ "#ffffff", "#9400d3" }, */
+/* 	{ "#000000", "#ffffff" }, */
+/* 	{ "#ffffff", "#000000" }, */
+/* }; */
+
+
 
 static const Rule rules[] = {
 	/* xprop(1):

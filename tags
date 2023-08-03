@@ -1594,6 +1594,7 @@ strict	grayblocks/preview.ini	/^monitor-strict = false$/;"	k	section:bar/main
 sw	dwm.c	/^static int sw, sh;           \/* X display screen geometry width, height *\/$/;"	v	typeref:typename:int	file:
 symbol	dwm.c	/^	const char *symbol;$/;"	m	struct:__anon0f53a99e0908	typeref:typename:const char *	file:
 tag	dwm.c	/^tag(const Arg *arg)$/;"	f	typeref:typename:void
+tagalpha	config.h	/^static const unsigned int tagalpha[] = { OPAQUE, baralpha };$/;"	v	typeref:typename:const unsigned int[]
 tagmon	dwm.c	/^tagmon(const Arg *arg)$/;"	f	typeref:typename:void
 tags	config.def.h	/^static const char *tags[] = { "", "", "", "", "󰣇", "", "", "", "" };$/;"	v	typeref:typename:const char * []
 tags	config.h	/^static const char *tags[] = { "", "", "", "", "󰣇", "", "", "", "" };$/;"	v	typeref:typename:const char * []
@@ -1601,8 +1602,6 @@ tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:Client	typeref:typename:unsigned i
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:unsigned int	file:
 tagsalt	config.def.h	/^static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
 tagsalt	config.h	/^static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
-tagscheme	dwm.c	/^static Clr **tagscheme;$/;"	v	typeref:typename:Clr **	file:
-tagsel	config.def.h	/^static const char *tagsel[][2] = {$/;"	v	typeref:typename:const char * [][2]
 tagsel	config.h	/^static const char *tagsel[][2] = {$/;"	v	typeref:typename:const char * [][2]
 tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:unsigned int[2]	file:
 tail	grayblocks/user_modules.ini	/^tail = true$/;"	k	section:module/updates
