@@ -137,6 +137,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "bash", "/home/abu/.config/polybar/grayblocks/scripts/launcher.sh"};
 
 static const char *srcshotcmd[] = { "bash", "/home/abu/.config/rofi/applets/bin/screenshot.sh", NULL};
+/*static const char *termcmd[] = { "st", NULL }; */
+// static const char *termcmd[] = { "alacritty", NULL };
 static const char *termcmd[] = { "st", NULL };
 static const char *lockcmd[] = { "dm-tool", "lock", NULL};
 static const char *downvol[] = {"pactl", "set-sink-volume", "0", "-5%", NULL};
