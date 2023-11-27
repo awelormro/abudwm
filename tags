@@ -1599,7 +1599,7 @@ tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:un
 tail	grayblocks/user_modules.ini	/^tail = true$/;"	k	section:module/updates
 temperature	grayblocks/modules.ini	/^warn-temperature = 65$/;"	k	section:module/temperature
 termcmd	config.def.h	/^static const char *termcmd[] = { "urxvt", NULL };$/;"	v	typeref:typename:const char * []
-termcmd	config.h	/^static const char *termcmd[] = { "st", NULL };$/;"	v	typeref:typename:const char * []
+termcmd	config.h	/^static const char *termcmd[] = { "urxvt", NULL };$/;"	v	typeref:typename:const char * []
 termcol0	config.def.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
 termcol0	config.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
 termcol1	config.def.h	/^static char termcol1[] = "#ff0000"; \/* red     *\/$/;"	v	typeref:typename:char[]
