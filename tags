@@ -681,9 +681,7 @@ battery	grayblocks/bars.ini	/^battery = BAT1$/;"	k	section:module/battery_bar
 battery	grayblocks/modules.ini	/^battery = BAT0$/;"	k	section:module/battery
 bh	dwm.c	/^static int bh;               \/* bar height *\/$/;"	v	typeref:typename:int	file:
 blocks	blocks/dwmblocks/blocks.def.h	/^static const Block blocks[] = {$/;"	v	typeref:typename:const Block[]
-blocks	blocks/dwmblocks/blocks.h	/^static const Block blocks[] = {$/;"	v	typeref:typename:const Block[]
 blocks	dwmblocks/blocks.def.h	/^static const Block blocks[] = {$/;"	v	typeref:typename:const Block[]
-blocks	dwmblocks/blocks.h	/^static const Block blocks[] = {$/;"	v	typeref:typename:const Block[]
 blocks.h	blocks/dwmblocks/Makefile	/^blocks.h:$/;"	t
 blocks.h	dwmblocks/Makefile	/^blocks.h:$/;"	t
 border	grayblocks/config.ini	/^compositing-border = over$/;"	k	section:settings
@@ -780,13 +778,9 @@ deck	vanitygaps.c	/^deck(Monitor *m)$/;"	f	typeref:typename:void
 default	grayblocks/modules.ini	/^icon-default = $/;"	k	section:module/workspaces
 defaultgaps	vanitygaps.c	/^defaultgaps(const Arg *arg)$/;"	f	typeref:typename:void
 delim	blocks/dwmblocks/blocks.def.h	/^static char delim[] = " ";$/;"	v	typeref:typename:char[]
-delim	blocks/dwmblocks/blocks.h	/^static char delim[] = " ";$/;"	v	typeref:typename:char[]
 delim	dwmblocks/blocks.def.h	/^static char delim[] = " ";$/;"	v	typeref:typename:char[]
-delim	dwmblocks/blocks.h	/^static char delim[] = " ";$/;"	v	typeref:typename:char[]
 delimLen	blocks/dwmblocks/blocks.def.h	/^static unsigned int delimLen = 4;$/;"	v	typeref:typename:unsigned int
-delimLen	blocks/dwmblocks/blocks.h	/^static unsigned int delimLen = 4;$/;"	v	typeref:typename:unsigned int
 delimLen	dwmblocks/blocks.def.h	/^static unsigned int delimLen = 4;$/;"	v	typeref:typename:unsigned int
-delimLen	dwmblocks/blocks.h	/^static unsigned int delimLen = 4;$/;"	v	typeref:typename:unsigned int
 destroynotify	dwm.c	/^destroynotify(XEvent *e)$/;"	f	typeref:typename:void
 detach	dwm.c	/^detach(Client *c)$/;"	f	typeref:typename:void
 detached	grayblocks/config.ini	/^tray-detached = false$/;"	k	section:bar/main
@@ -801,8 +795,8 @@ discharging	grayblocks/modules.ini	/^label-discharging = %percentage%%$/;"	k	sec
 disconnected	grayblocks/modules.ini	/^format-disconnected = <label-disconnected>$/;"	k	section:module/network
 disconnected	grayblocks/modules.ini	/^label-disconnected = "%{A1:networkmanager_dmenu &:} Offline%{A}"$/;"	k	section:module/network
 dist	Makefile	/^dist: clean$/;"	t
-dmenucmd	config.def.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/polybar\/grayblocks\/scripts\/l/;"	v	typeref:typename:const char * []
-dmenucmd	config.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/polybar\/grayblocks\/scripts\/l/;"	v	typeref:typename:const char * []
+dmenucmd	config.def.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/rofi\/scripts\/launcher_t1"};$/;"	v	typeref:typename:const char * []
+dmenucmd	config.h	/^static const char *dmenucmd[] = { "bash", "\/home\/abu\/.config\/rofi\/scripts\/launcher_t1"};$/;"	v	typeref:typename:const char * []
 dmenufont	config.def.h	/^static const char dmenufont[]       = "Mononoki Nerd Font:size=10";$/;"	v	typeref:typename:const char[]
 dmenufont	config.h	/^static const char dmenufont[]       = "Mononoki Nerd Font:size=10";$/;"	v	typeref:typename:const char[]
 dmenumon	config.def.h	/^static char dmenumon[2] = "0"; \/* component of dmenucmd, manipulated in spawn() *\/$/;"	v	typeref:typename:char[2]
@@ -1574,8 +1568,8 @@ soundcard	grayblocks/modules.ini	/^speaker-soundcard = default$/;"	k	section:mod
 sp	dwm.c	/^static int sp;               \/* side padding for bar *\/$/;"	v	typeref:typename:int	file:
 spawn	dwm.c	/^spawn(const Arg *arg)$/;"	f	typeref:typename:void
 spiral	vanitygaps.c	/^spiral(Monitor *m)$/;"	f	typeref:typename:void
-srcshotcmd	config.def.h	/^static const char *srcshotcmd[] = { "bash", "\/home\/abu\/.config\/rofi\/applets\/bin\/screensho/;"	v	typeref:typename:const char * []
-srcshotcmd	config.h	/^static const char *srcshotcmd[] = { "bash", "\/home\/abu\/.config\/rofi\/applets\/bin\/screensho/;"	v	typeref:typename:const char * []
+srcshotcmd	config.def.h	/^static const char *srcshotcmd[] = { "xfce4-screenshooter", NULL};$/;"	v	typeref:typename:const char * []
+srcshotcmd	config.h	/^static const char *srcshotcmd[] = { "xfce4-screenshooter", NULL};$/;"	v	typeref:typename:const char * []
 stack	dwm.c	/^	Client *stack;$/;"	m	struct:Monitor	typeref:typename:Client *	file:
 stats	grayblocks/modules.ini	/^accumulate-stats = true$/;"	k	section:module/network
 statusContinue	blocks/dwmblocks/dwmblocks.c	/^static int statusContinue = 1;$/;"	v	typeref:typename:int	file:
@@ -1594,7 +1588,6 @@ strict	grayblocks/preview.ini	/^monitor-strict = false$/;"	k	section:bar/main
 sw	dwm.c	/^static int sw, sh;           \/* X display screen geometry width, height *\/$/;"	v	typeref:typename:int	file:
 symbol	dwm.c	/^	const char *symbol;$/;"	m	struct:__anon0f53a99e0908	typeref:typename:const char *	file:
 tag	dwm.c	/^tag(const Arg *arg)$/;"	f	typeref:typename:void
-tagalpha	config.h	/^static const unsigned int tagalpha[] = { OPAQUE, baralpha };$/;"	v	typeref:typename:const unsigned int[]
 tagmon	dwm.c	/^tagmon(const Arg *arg)$/;"	f	typeref:typename:void
 tags	config.def.h	/^static const char *tags[] = { "", "", "", "", "󰣇", "", "", "", "" };$/;"	v	typeref:typename:const char * []
 tags	config.h	/^static const char *tags[] = { "", "", "", "", "󰣇", "", "", "", "" };$/;"	v	typeref:typename:const char * []
@@ -1602,11 +1595,10 @@ tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:Client	typeref:typename:unsigned i
 tags	dwm.c	/^	unsigned int tags;$/;"	m	struct:__anon0f53a99e0a08	typeref:typename:unsigned int	file:
 tagsalt	config.def.h	/^static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
 tagsalt	config.h	/^static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };$/;"	v	typeref:typename:const char * []
-tagsel	config.h	/^static const char *tagsel[][2] = {$/;"	v	typeref:typename:const char * [][2]
 tagset	dwm.c	/^	unsigned int tagset[2];$/;"	m	struct:Monitor	typeref:typename:unsigned int[2]	file:
 tail	grayblocks/user_modules.ini	/^tail = true$/;"	k	section:module/updates
 temperature	grayblocks/modules.ini	/^warn-temperature = 65$/;"	k	section:module/temperature
-termcmd	config.def.h	/^static const char *termcmd[] = { "st", NULL };$/;"	v	typeref:typename:const char * []
+termcmd	config.def.h	/^static const char *termcmd[] = { "urxvt", NULL };$/;"	v	typeref:typename:const char * []
 termcmd	config.h	/^static const char *termcmd[] = { "st", NULL };$/;"	v	typeref:typename:const char * []
 termcol0	config.def.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
 termcol0	config.h	/^static char termcol0[] = "#000000"; \/* black   *\/$/;"	v	typeref:typename:char[]
@@ -1653,8 +1645,8 @@ togglealttag	dwm.c	/^togglealttag(const Arg *arg)$/;"	f	typeref:typename:void
 togglebar	dwm.c	/^togglebar(const Arg *arg)$/;"	f	typeref:typename:void
 togglefloating	dwm.c	/^togglefloating(const Arg *arg)$/;"	f	typeref:typename:void
 togglegaps	vanitygaps.c	/^togglegaps(const Arg *arg)$/;"	f	typeref:typename:void
-togglesistray	config.def.h	/^static const char *togglesistray[]={"bash", "\/home\/abu\/dotfiles\/traycollapse"};$/;"	v	typeref:typename:const char * []
-togglesistray	config.h	/^static const char *togglesistray[]={"bash", "\/home\/abu\/dotfiles\/traycollapse"};$/;"	v	typeref:typename:const char * []
+togglesistray	config.def.h	/^static const char *togglesistray[]={"bash", "\/home\/abu\/.dotfiles\/traycollapse"};$/;"	v	typeref:typename:const char * []
+togglesistray	config.h	/^static const char *togglesistray[]={"bash", "\/home\/abu\/.dotfiles\/traycollapse"};$/;"	v	typeref:typename:const char * []
 toggletag	dwm.c	/^toggletag(const Arg *arg)$/;"	f	typeref:typename:void
 toggleview	dwm.c	/^toggleview(const Arg *arg)$/;"	f	typeref:typename:void
 top	grayblocks/config.ini	/^margin-top = 0$/;"	k	section:global/wm

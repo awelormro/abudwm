@@ -133,20 +133,22 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-/* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL }; */
-static const char *dmenucmd[] = { "bash", "/home/abu/.config/polybar/grayblocks/scripts/launcher.sh"};
+/* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", termcol0, "-nf", termcol4, "-sb", termcol13, "-sf", termcol14, NULL }; */
+static const char *dmenucmd[] = { "bash", "/home/abu/.config/rofi/scripts/launcher_t1"};
 
-static const char *srcshotcmd[] = { "bash", "/home/abu/.config/rofi/applets/bin/screenshot.sh", NULL};
-/*static const char *termcmd[] = { "st", NULL }; */
+static const char *srcshotcmd[] = { "xfce4-screenshooter", NULL};
+/* static const char *termcmd[] = { "st", NULL }; */
+
 // static const char *termcmd[] = { "alacritty", NULL };
-static const char *termcmd[] = { "st", NULL };
+/* static const char *termcmd[] = { "st", NULL }; */
+static const char *termcmd[] = { "urxvt", NULL };
 static const char *lockcmd[] = { "dm-tool", "lock", NULL};
 static const char *downvol[] = {"pactl", "set-sink-volume", "0", "-5%", NULL};
 static const char *upvol[] = {"pactl", "set-sink-volume", "0", "+5%", NULL};
 static const char *mutevol[] = { "ctl", "set-sink-mute", "0", "toggle",NULL}; 
 static const char *brightnessup[]={"brightnessctl", "set", "+5%"};
 static const char *brightnessdown[]={"brightnessctl", "set", "5%-"};
-static const char *togglesistray[]={"bash", "/home/abu/dotfiles/traycollapse"};
+static const char *togglesistray[]={"bash", "/home/abu/.dotfiles/traycollapse"};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
